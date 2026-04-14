@@ -1,0 +1,1348 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 14/04/2026 10:10
+
+.SUBCKT DICE vss in_srout out_srout vdd_block vdd_periph out_shift out_l2s
++ out_latch clk out_srin in_latch in_srin in_shift
+X$2 vss out_l2s out_shift out_srout vdd_periph out_srin clk out_latch in_shift
++ in_srin in_srout in_latch vdd_block SPDICEBlock_512x32_4we_C2B_R3B4B_Test
+.ENDS DICE
+
+.SUBCKT SPDICEBlock_512x32_4we_C2B_R3B4B_Test vss out_l2s out_shift out_srout
++ vdd_periph out_srin clk out_latch in_shift in_srin in_srout in_latch vdd_block
+X$1 vss vdd_block \$58 \$64 \$63 \$56 \$62 \$57 \$59 \$60 \$61 clk \$65 \$14
++ \$67 \$15 \$68 \$16 \$69 \$17 \$70 \$18 \$94 \$19 \$95 \$20 \$71 \$21 \$72
++ \$73 \$22 \$74 \$23 \$75 \$24 \$76 \$25 \$77 \$26 \$96 \$27 \$97 \$28 \$78
++ \$29 \$79 \$80 \$30 \$81 \$31 \$82 \$32 \$83 \$33 \$84 \$34 \$98 \$35 \$99
++ \$36 \$85 \$37 \$86 \$87 \$38 \$88 \$39 \$89 \$40 \$90 \$41 \$91 \$42 \$100
++ \$43 \$101 \$44 \$92 \$45 \$93 SPDICEBlock_512x32_4we_C2B_R3B4B
+X$2 vss in_shift \$49 vdd_periph \$50 in_latch \$65 \$67 \$68 \$69 \$70 \$94
++ \$95 \$71 \$72 SPDICETimingIn_9SL
+X$3 vss out_shift out_l2s \$8 vdd_periph \$7 out_latch \$14 \$15 \$16 \$17 \$18
++ \$19 \$20 \$21 SPDICETimingOut_8SL
+X$6 vss in_shift \$50 vdd_periph \$51 in_latch \$73 \$74 \$75 \$76 \$77 \$96
++ \$97 \$78 \$79 SPDICETimingIn_9SL
+X$7 vss out_shift out_l2s \$9 vdd_periph \$8 out_latch \$22 \$23 \$24 \$25 \$26
++ \$27 \$28 \$29 SPDICETimingOut_8SL
+X$8 vss in_shift \$52 vdd_periph in_srout in_latch \$87 \$88 \$89 \$90 \$91
++ \$100 \$101 \$92 \$93 SPDICETimingIn_9SL
+X$9 vss out_shift out_l2s out_srout vdd_periph \$10 out_latch \$38 \$39 \$40
++ \$41 \$42 \$43 \$44 \$45 SPDICETimingOut_8SL
+X$10 vss in_shift \$51 vdd_periph \$52 in_latch \$80 \$81 \$82 \$83 \$84 \$98
++ \$99 \$85 \$86 SPDICETimingIn_9SL
+X$11 vss out_shift out_l2s \$10 vdd_periph \$9 out_latch \$30 \$31 \$32 \$33
++ \$34 \$35 \$36 \$37 SPDICETimingOut_8SL
+X$12 vss in_shift in_srin vdd_periph \$49 in_latch \$56 \$57 \$58 \$59 \$60
++ \$61 \$62 \$63 \$64 SPDICETimingIn_9SF
+X$20 vss vdd_periph out_shift out_l2s in_latch out_latch clk out_srin \$7
++ SPDICETimingOut_2SL
+.ENDS SPDICEBlock_512x32_4we_C2B_R3B4B_Test
+
+.SUBCKT SPDICETimingOut_2SL vss vdd sr_shift l2s o[0] o[1] sr_latch sr_in sr_out
+X$1 vss \$11 \$10 sr_shift vdd dff_x1
+X$2 vss o[0] \$12 sr_latch vdd dff_x1
+X$3 vdd vss l2s sr_in \$12 \$11 mux2_x1
+X$4 vdd vss l2s \$10 \$15 \$14 mux2_x1
+X$5 vss \$14 sr_out sr_shift vdd dff_x1
+X$6 vss o[1] \$15 sr_latch vdd dff_x1
+.ENDS SPDICETimingOut_2SL
+
+.SUBCKT SPDICETimingOut_8SL vss sr_shift l2s sr_out vdd sr_in sr_latch o[0]
++ o[1] o[2] o[3] o[4] o[5] o[6] o[7]
+X$1 vss \$9 \$10 sr_shift vdd dff_x1
+X$2 vss o[0] \$25 sr_latch vdd dff_x1
+X$3 vdd vss l2s sr_in \$25 \$9 mux2_x1
+X$4 vdd vss l2s \$10 \$5 \$11 mux2_x1
+X$5 vss \$11 \$12 sr_shift vdd dff_x1
+X$6 vss o[1] \$5 sr_latch vdd dff_x1
+X$7 vss \$13 \$14 sr_shift vdd dff_x1
+X$8 vss o[2] \$26 sr_latch vdd dff_x1
+X$9 vdd vss l2s \$12 \$26 \$13 mux2_x1
+X$10 vdd vss l2s \$14 \$6 \$15 mux2_x1
+X$11 vss \$15 \$16 sr_shift vdd dff_x1
+X$12 vss o[3] \$6 sr_latch vdd dff_x1
+X$13 vss \$17 \$18 sr_shift vdd dff_x1
+X$14 vss o[4] \$28 sr_latch vdd dff_x1
+X$15 vdd vss l2s \$16 \$28 \$17 mux2_x1
+X$16 vdd vss l2s \$18 \$7 \$19 mux2_x1
+X$17 vss \$19 \$20 sr_shift vdd dff_x1
+X$18 vss o[5] \$7 sr_latch vdd dff_x1
+X$19 vss \$21 \$22 sr_shift vdd dff_x1
+X$20 vss o[6] \$29 sr_latch vdd dff_x1
+X$21 vdd vss l2s \$20 \$29 \$21 mux2_x1
+X$22 vdd vss l2s \$22 \$8 \$23 mux2_x1
+X$23 vss \$23 sr_out sr_shift vdd dff_x1
+X$24 vss o[7] \$8 sr_latch vdd dff_x1
+.ENDS SPDICETimingOut_8SL
+
+.SUBCKT SPDICETimingIn_9SL vss sr_shift sr_in vdd sr_out sr_latch i[0] i[1]
++ i[2] i[3] i[4] i[5] i[6] i[7] i[8]
+X$1 vss sr_in \$5 sr_shift vdd dff_x1
+X$2 vss \$5 i[0] sr_latch vdd dff_x1
+X$3 vss \$5 \$6 sr_shift vdd dff_x1
+X$4 vss \$6 i[1] sr_latch vdd dff_x1
+X$5 vss \$6 \$7 sr_shift vdd dff_x1
+X$6 vss \$7 i[2] sr_latch vdd dff_x1
+X$7 vss \$7 \$8 sr_shift vdd dff_x1
+X$8 vss \$8 i[3] sr_latch vdd dff_x1
+X$9 vss \$8 \$9 sr_shift vdd dff_x1
+X$10 vss \$9 i[4] sr_latch vdd dff_x1
+X$11 vss \$9 \$10 sr_shift vdd dff_x1
+X$12 vss \$10 i[5] sr_latch vdd dff_x1
+X$13 vss \$10 \$11 sr_shift vdd dff_x1
+X$14 vss \$11 i[6] sr_latch vdd dff_x1
+X$15 vss \$11 \$12 sr_shift vdd dff_x1
+X$16 vss \$12 i[7] sr_latch vdd dff_x1
+X$17 vss \$12 sr_out sr_shift vdd dff_x1
+X$18 vss sr_out i[8] sr_latch vdd dff_x1
+.ENDS SPDICETimingIn_9SL
+
+.SUBCKT SPDICETimingIn_9SF vss sr_shift sr_in vdd sr_out sr_latch i[8] i[7]
++ i[6] i[5] i[4] i[3] i[2] i[1] i[0]
+X$1 vss sr_in \$5 sr_shift vdd dff_x1
+X$2 vss \$5 i[8] sr_latch vdd dff_x1
+X$3 vss \$5 \$6 sr_shift vdd dff_x1
+X$4 vss \$6 i[7] sr_latch vdd dff_x1
+X$5 vss \$6 \$7 sr_shift vdd dff_x1
+X$6 vss \$7 i[6] sr_latch vdd dff_x1
+X$7 vss \$7 \$8 sr_shift vdd dff_x1
+X$8 vss \$8 i[5] sr_latch vdd dff_x1
+X$9 vss \$8 \$9 sr_shift vdd dff_x1
+X$10 vss \$9 i[4] sr_latch vdd dff_x1
+X$11 vss \$9 \$10 sr_shift vdd dff_x1
+X$12 vss \$10 i[3] sr_latch vdd dff_x1
+X$13 vss \$10 \$11 sr_shift vdd dff_x1
+X$14 vss \$11 i[2] sr_latch vdd dff_x1
+X$15 vss \$11 \$12 sr_shift vdd dff_x1
+X$16 vss \$12 i[1] sr_latch vdd dff_x1
+X$17 vss \$12 sr_out sr_shift vdd dff_x1
+X$18 vss sr_out i[0] sr_latch vdd dff_x1
+.ENDS SPDICETimingIn_9SF
+
+.SUBCKT SPDICEBlock_512x32_4we_C2B_R3B4B vss vdd a[6] a[0] a[1] a[8] a[2] a[7]
++ a[5] a[4] a[3] clk d[0] q[0] d[1] q[1] d[2] q[2] d[3] q[3] d[4] q[4] d[5]
++ q[5] d[6] q[6] d[7] q[7] we[0] d[8] q[8] d[9] q[9] d[10] q[10] d[11] q[11]
++ d[12] q[12] d[13] q[13] d[14] q[14] d[15] q[15] we[1] d[16] q[16] d[17] q[17]
++ d[18] q[18] d[19] q[19] d[20] q[20] d[21] q[21] d[22] q[22] d[23] q[23] we[2]
++ d[24] q[24] d[25] q[25] d[26] q[26] d[27] q[27] d[28] q[28] d[29] q[29] d[30]
++ q[30] d[31] q[31] we[3]
+X$1 vss \$17 vdd a[0] \$13 \$15 a[1] \$14 \$16 a[2] \$92 \$91 \$95 \$98 \$101
++ \$104 a[3] \$105 \$103 a[4] \$102 \$100 \$99 \$97 \$96 \$94 a[5] \$93 \$127
++ \$128 \$126 a[6] \$135 \$108 \$109 \$112 \$115 \$120 a[7] \$121 \$125 \$124
++ a[8] \$118 \$106 \$111 \$110 \$90 \$89 \$133 \$129 \$136 \$137 \$132 \$134
++ \$113 \$119 \$123 \$122 \$117 \$114 \$116 \$107 \$131 \$130 \$473 \$472 \$464
++ \$469 \$467 \$466 \$470 \$471 \$465 \$468 \$549 \$550 \$521 \$532 \$19 \$537
++ \$536 \$526 \$525 \$545 \$543 \$514 \$492 \$490 \$489 \$520 \$519 \$484 \$513
++ \$508 \$507 \$502 \$501 \$497 \$498 \$499 \$500 \$503 \$504 \$505 \$506 \$496
++ \$510 \$511 \$512 \$515 \$516 \$517 \$518 \$509 \$483 \$485 \$488 \$491 \$494
++ \$495 \$493 \$487 \$486 \$531 \$544 \$547 \$548 \$522 \$523 \$527 \$529 \$533
++ \$534 \$539 \$540 \$538 \$535 \$530 \$528 \$524 \$482 \$541 \$546 \$542
++ SPDICERowPeriph_PD3B4B_LD2B2R
+X$2 vss \$92 \$91 \$183 \$185 \$95 \$98 \$187 \$171 \$101 \$104 \$154 \$155
++ \$105 \$103 \$158 \$159 \$102 \$100 \$153 \$163 \$99 \$97 \$166 \$167 \$96
++ \$94 \$168 \$169 \$93 \$127 \$151 \$170 \$128 \$126 \$165 \$164 \$135 \$108
++ \$161 \$160 \$109 \$112 \$157 \$156 \$115 \$120 \$188 \$186 \$121 \$125 \$184
++ \$182 \$124 \$118 \$181 \$180 \$106 \$111 \$179 \$178 \$110 \$90 \$177 \$176
++ \$89 \$133 \$175 \$174 \$129 \$136 \$173 \$162 \$137 \$132 \$172 \$143 \$134
++ \$113 \$145 \$148 \$119 \$123 \$147 \$152 \$122 \$117 \$150 \$149 \$114 \$116
++ \$140 \$146 \$107 \$131 \$144 \$142 \$130 \$473 \$139 \$141 \$472 \$464 \$474
++ \$475 \$469 \$467 \$476 \$477 \$466 \$470 \$479 \$481 \$471 \$465 \$478 \$480
++ \$468 \$549 \$463 \$554 \$550 \$521 \$563 \$566 \$532 \$537 \$573 \$572 vdd
++ \$536 \$569 \$564 \$526 \$525 \$545 \$560 \$551 \$543 \$514 \$555 \$558 \$492
++ \$490 \$552 \$562 \$489 \$520 \$565 \$568 \$519 \$484 \$571 \$559 \$513 \$508
++ \$570 \$567 \$507 \$502 \$561 \$553 \$501 \$497 \$557 \$601 \$498 \$499 \$602
++ \$603 \$500 \$503 \$605 \$606 \$504 \$505 \$608 \$609 \$506 \$496 \$611 \$600
++ \$510 \$511 \$614 \$615 \$512 \$515 \$618 \$556 \$516 \$517 \$616 \$612 \$518
++ \$509 \$576 \$587 \$483 \$485 \$578 \$579 \$488 \$491 \$581 \$582 \$494 \$495
++ \$583 \$585 \$493 \$487 \$586 \$574 \$486 \$531 \$589 \$590 \$544 \$547 \$592
++ \$593 \$548 \$522 \$595 \$596 \$523 \$527 \$598 \$599 \$529 \$533 \$597 \$594
++ \$534 \$539 \$591 \$588 \$540 \$538 \$584 \$580 \$535 \$530 \$577 \$575 \$528
++ \$524 \$617 \$619 \$482 \$541 \$613 \$610 \$546 \$542 \$607 \$604
++ SPDICEWLDriverCol_128RN26L400WP26L800W
+X$3 vss vdd clk \$13 \$19 \$20 \$189 \$190 SPDICEClockGen_4S11341D1R
+X$4 vss vdd d[0] q[0] d[1] q[1] d[2] q[2] d[3] q[3] d[4] q[4] d[5] q[5] d[6]
++ q[6] d[7] q[7] we[0] d[8] q[8] d[9] q[9] d[10] q[10] d[11] q[11] d[12] q[12]
++ d[13] q[13] d[14] q[14] d[15] q[15] we[1] \$176 \$148 \$145 \$143 \$172 \$162
++ \$173 \$174 \$147 \$177 \$178 \$179 \$180 \$181 \$17 \$15 \$182 \$480 \$474
++ \$475 \$476 \$141 \$477 \$139 \$479 \$481 \$478 \$175 \$142 \$144 \$463 \$146
++ \$151 \$140 \$149 \$150 \$152 \$159 \$188 \$185 \$187 \$171 \$156 \$157 \$154
++ \$155 \$158 \$160 \$184 \$161 \$153 \$163 \$164 \$166 \$165 \$167 \$168 \$169
++ \$170 \$14 \$16 \$20 \$186 \$183 d[16] q[16] d[17] q[17] d[18] q[18] d[19]
++ q[19] \$189 \$190 d[20] q[20] d[21] q[21] d[22] q[22] d[23] q[23] we[2] d[24]
++ q[24] d[25] q[25] d[26] q[26] d[27] q[27] d[28] q[28] d[29] q[29] d[30] q[30]
++ d[31] q[31] we[3] \$585 \$582 \$594 \$597 \$557 \$553 \$561 \$583 \$599 \$579
++ \$554 \$586 \$563 \$566 \$574 \$567 \$570 \$575 \$602 \$601 \$587 \$613 \$603
++ \$619 \$617 \$610 \$581 \$577 \$580 \$584 \$588 \$591 \$578 \$614 \$616 \$604
++ \$576 \$608 \$609 \$560 \$589 \$551 \$611 \$612 \$598 \$590 \$562 \$556 \$600
++ \$552 \$555 \$618 \$558 \$615 \$572 \$596 \$595 \$593 \$573 \$568 \$564 \$605
++ \$559 \$592 \$571 \$606 \$607 \$569 \$565
++ SPDICEColumnBlock_COL128R_CP8B_CM4MN26L580W1R_PC26L100W_4WE
+.ENDS SPDICEBlock_512x32_4we_C2B_R3B4B
+
+.SUBCKT mux2_x1 vdd vss cmd i0 i1 q
+M$1 \$1 cmd vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$2 vss i0 \$9 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p PS=1.16u
++ PD=1.16u
+M$3 \$9 \$1 \$6 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.195p PS=1.16u
++ PD=1.28u
+M$4 \$6 cmd \$10 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.195p AD=0.1482p PS=1.28u
++ PD=1.16u
+M$5 \$10 i1 vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.2092p PS=1.16u
++ PD=1.48u
+M$6 vss \$6 q vss sg13_lv_nmos L=0.13u W=1.07u AS=0.2092p AD=0.3638p PS=1.48u
++ PD=2.82u
+M$7 \$1 cmd vdd vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$8 vdd i0 \$11 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p PS=1.16u
++ PD=1.16u
+M$9 \$11 cmd \$6 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.195p PS=1.16u
++ PD=1.28u
+M$10 \$6 \$1 \$12 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.195p AD=0.1482p
++ PS=1.28u PD=1.16u
+M$11 vdd i1 \$12 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2075p AD=0.1482p
++ PS=1.47u PD=1.16u
+M$12 vdd \$6 q vdd sg13_lv_pmos L=0.13u W=1.06u AS=0.2075p AD=0.3604p PS=1.47u
++ PD=2.8u
+.ENDS mux2_x1
+
+.SUBCKT SPDICEClockGen_4S11341D1R vss vdd clk decodeclk wl_en precharge_n
++ columnclk we_en
+X$1 vdd vss clk decodeclk buf_x1
+X$2 vdd vss \$7 wl_en buf_x4
+X$3 vss vdd precharge_n \$10 inv_x3
+X$4 vdd vss clk columnclk buf_x1
+X$5 vss vdd \$7 \$10 clk SPDICENonOvlClock_4S11341D1R
+X$6 vdd vss \$7 we_en buf_x1
+.ENDS SPDICEClockGen_4S11341D1R
+
+.SUBCKT SPDICEColumnBlock_COL128R_CP8B_CM4MN26L580W1R_PC26L100W_4WE vss vdd
++ d[0] q[0] d[1] q[1] d[2] q[2] d[3] q[3] d[4] q[4] d[5] q[5] d[6] q[6] d[7]
++ q[7] we[0] d[8] q[8] d[9] q[9] d[10] q[10] d[11] q[11] d[12] q[12] d[13]
++ q[13] d[14] q[14] d[15] q[15] we[1] wl[31] wl[39] wl[38] wl[37] wl[36] wl[35]
++ wl[34] wl[33] wl[40] wl[30] wl[29] wl[28] wl[27] wl[26] mux[0] mux[1] wl[25]
++ wl[57] wl[50] wl[51] wl[52] wl[49] wl[53] wl[48] wl[54] wl[55] wl[56] wl[32]
++ wl[47] wl[46] wl[58] wl[45] wl[14] wl[44] wl[43] wl[42] wl[41] wl[7] wl[22]
++ wl[1] wl[2] wl[3] wl[21] wl[20] wl[4] wl[5] wl[6] wl[19] wl[24] wl[18] wl[8]
++ wl[9] wl[17] wl[10] wl[16] wl[11] wl[12] wl[13] wl[15] mux[2] mux[3]
++ precharge_n wl[23] wl[0] d[16] q[16] d[17] q[17] d[18] q[18] d[19] q[19] clk
++ we_en d[20] q[20] d[21] q[21] d[22] q[22] d[23] q[23] we[2] d[24] q[24] d[25]
++ q[25] d[26] q[26] d[27] q[27] d[28] q[28] d[29] q[29] d[30] q[30] d[31] q[31]
++ we[3] wl[103] wl[101] wl[115] wl[114] wl[80] wl[79] wl[78] wl[102] wl[113]
++ wl[99] wl[59] wl[104] wl[60] wl[61] wl[105] wl[77] wl[76] wl[121] wl[82]
++ wl[81] wl[97] wl[124] wl[83] wl[123] wl[122] wl[125] wl[100] wl[120] wl[119]
++ wl[118] wl[117] wl[116] wl[98] wl[90] wl[94] wl[127] wl[96] wl[86] wl[87]
++ wl[66] wl[106] wl[67] wl[88] wl[95] wl[112] wl[107] wl[71] wl[93] wl[89]
++ wl[70] wl[68] wl[92] wl[69] wl[91] wl[63] wl[111] wl[110] wl[109] wl[62]
++ wl[73] wl[65] wl[84] wl[75] wl[108] wl[74] wl[85] wl[126] wl[64] wl[72]
+X$1 vss d[8] q[8] d[9] q[9] d[10] q[10] d[11] q[11] d[12] q[12] d[13] q[13]
++ d[14] q[14] d[15] q[15] we[1] clk we_en vdd mux[0] mux[1] mux[2] mux[3]
++ precharge_n wl[9] wl[21] wl[3] wl[23] wl[4] wl[5] wl[6] wl[8] wl[22] wl[20]
++ wl[7] wl[18] wl[2] wl[13] wl[1] wl[0] wl[26] wl[12] wl[14] wl[25] wl[11]
++ wl[24] wl[10] wl[15] wl[16] wl[17] wl[19] wl[53] wl[55] wl[38] wl[54] wl[42]
++ wl[52] wl[51] wl[50] wl[49] wl[39] wl[48] wl[47] wl[46] wl[45] wl[44] wl[40]
++ wl[43] wl[27] wl[41] wl[36] wl[35] wl[34] wl[33] wl[32] wl[31] wl[30] wl[29]
++ wl[28] wl[37] wl[58] wl[56] wl[57] wl[73] wl[72] wl[87] wl[74] wl[75] wl[88]
++ wl[76] wl[77] wl[78] wl[79] wl[86] wl[80] wl[81] wl[82] wl[83] wl[84] wl[85]
++ wl[104] wl[59] wl[96] wl[97] wl[98] wl[99] wl[100] wl[101] wl[102] wl[103]
++ wl[70] wl[105] wl[106] wl[107] wl[108] wl[109] wl[110] wl[111] wl[112]
++ wl[113] wl[60] wl[71] wl[89] wl[69] wl[68] wl[90] wl[67] wl[66] wl[91] wl[65]
++ wl[64] wl[92] wl[63] wl[93] wl[62] wl[61] wl[94] wl[95] wl[116] wl[122]
++ wl[123] wl[117] wl[124] wl[121] wl[115] wl[127] wl[125] wl[118] wl[114]
++ wl[120] wl[126] wl[119] SPDICEColumn_128R_CP8B_CM4MN26L580W1R_PC26L100W
+X$2 vss d[0] q[0] d[1] q[1] d[2] q[2] d[3] q[3] d[4] q[4] d[5] q[5] d[6] q[6]
++ d[7] q[7] we[0] clk we_en vdd mux[0] mux[1] mux[2] mux[3] precharge_n wl[9]
++ wl[21] wl[3] wl[23] wl[4] wl[5] wl[6] wl[8] wl[22] wl[20] wl[7] wl[18] wl[2]
++ wl[13] wl[1] wl[0] wl[26] wl[12] wl[14] wl[25] wl[11] wl[24] wl[10] wl[15]
++ wl[16] wl[17] wl[19] wl[53] wl[55] wl[38] wl[54] wl[42] wl[52] wl[51] wl[50]
++ wl[49] wl[39] wl[48] wl[47] wl[46] wl[45] wl[44] wl[40] wl[43] wl[27] wl[41]
++ wl[36] wl[35] wl[34] wl[33] wl[32] wl[31] wl[30] wl[29] wl[28] wl[37] wl[58]
++ wl[56] wl[57] wl[73] wl[72] wl[87] wl[74] wl[75] wl[88] wl[76] wl[77] wl[78]
++ wl[79] wl[86] wl[80] wl[81] wl[82] wl[83] wl[84] wl[85] wl[104] wl[59] wl[96]
++ wl[97] wl[98] wl[99] wl[100] wl[101] wl[102] wl[103] wl[70] wl[105] wl[106]
++ wl[107] wl[108] wl[109] wl[110] wl[111] wl[112] wl[113] wl[60] wl[71] wl[89]
++ wl[69] wl[68] wl[90] wl[67] wl[66] wl[91] wl[65] wl[64] wl[92] wl[63] wl[93]
++ wl[62] wl[61] wl[94] wl[95] wl[116] wl[122] wl[123] wl[117] wl[124] wl[121]
++ wl[115] wl[127] wl[125] wl[118] wl[114] wl[120] wl[126] wl[119]
++ SPDICEColumn_128R_CP8B_CM4MN26L580W1R_PC26L100W
+X$3 vss d[16] q[16] d[17] q[17] d[18] q[18] d[19] q[19] d[20] q[20] d[21] q[21]
++ d[22] q[22] d[23] q[23] we[2] clk we_en vdd mux[0] mux[1] mux[2] mux[3]
++ precharge_n wl[9] wl[21] wl[3] wl[23] wl[4] wl[5] wl[6] wl[8] wl[22] wl[20]
++ wl[7] wl[18] wl[2] wl[13] wl[1] wl[0] wl[26] wl[12] wl[14] wl[25] wl[11]
++ wl[24] wl[10] wl[15] wl[16] wl[17] wl[19] wl[53] wl[55] wl[38] wl[54] wl[42]
++ wl[52] wl[51] wl[50] wl[49] wl[39] wl[48] wl[47] wl[46] wl[45] wl[44] wl[40]
++ wl[43] wl[27] wl[41] wl[36] wl[35] wl[34] wl[33] wl[32] wl[31] wl[30] wl[29]
++ wl[28] wl[37] wl[58] wl[56] wl[57] wl[73] wl[72] wl[87] wl[74] wl[75] wl[88]
++ wl[76] wl[77] wl[78] wl[79] wl[86] wl[80] wl[81] wl[82] wl[83] wl[84] wl[85]
++ wl[104] wl[59] wl[96] wl[97] wl[98] wl[99] wl[100] wl[101] wl[102] wl[103]
++ wl[70] wl[105] wl[106] wl[107] wl[108] wl[109] wl[110] wl[111] wl[112]
++ wl[113] wl[60] wl[71] wl[89] wl[69] wl[68] wl[90] wl[67] wl[66] wl[91] wl[65]
++ wl[64] wl[92] wl[63] wl[93] wl[62] wl[61] wl[94] wl[95] wl[116] wl[122]
++ wl[123] wl[117] wl[124] wl[121] wl[115] wl[127] wl[125] wl[118] wl[114]
++ wl[120] wl[126] wl[119] SPDICEColumn_128R_CP8B_CM4MN26L580W1R_PC26L100W
+X$4 vss d[24] q[24] d[25] q[25] d[26] q[26] d[27] q[27] d[28] q[28] d[29] q[29]
++ d[30] q[30] d[31] q[31] we[3] clk we_en vdd mux[0] mux[1] mux[2] mux[3]
++ precharge_n wl[9] wl[21] wl[3] wl[23] wl[4] wl[5] wl[6] wl[8] wl[22] wl[20]
++ wl[7] wl[18] wl[2] wl[13] wl[1] wl[0] wl[26] wl[12] wl[14] wl[25] wl[11]
++ wl[24] wl[10] wl[15] wl[16] wl[17] wl[19] wl[53] wl[55] wl[38] wl[54] wl[42]
++ wl[52] wl[51] wl[50] wl[49] wl[39] wl[48] wl[47] wl[46] wl[45] wl[44] wl[40]
++ wl[43] wl[27] wl[41] wl[36] wl[35] wl[34] wl[33] wl[32] wl[31] wl[30] wl[29]
++ wl[28] wl[37] wl[58] wl[56] wl[57] wl[73] wl[72] wl[87] wl[74] wl[75] wl[88]
++ wl[76] wl[77] wl[78] wl[79] wl[86] wl[80] wl[81] wl[82] wl[83] wl[84] wl[85]
++ wl[104] wl[59] wl[96] wl[97] wl[98] wl[99] wl[100] wl[101] wl[102] wl[103]
++ wl[70] wl[105] wl[106] wl[107] wl[108] wl[109] wl[110] wl[111] wl[112]
++ wl[113] wl[60] wl[71] wl[89] wl[69] wl[68] wl[90] wl[67] wl[66] wl[91] wl[65]
++ wl[64] wl[92] wl[63] wl[93] wl[62] wl[61] wl[94] wl[95] wl[116] wl[122]
++ wl[123] wl[117] wl[124] wl[121] wl[115] wl[127] wl[125] wl[118] wl[114]
++ wl[120] wl[126] wl[119] SPDICEColumn_128R_CP8B_CM4MN26L580W1R_PC26L100W
+.ENDS SPDICEColumnBlock_COL128R_CP8B_CM4MN26L580W1R_PC26L100W_4WE
+
+.SUBCKT SPDICEWLDriverCol_128RN26L400WP26L800W vss wl_n[0] wl_n[1] wl[0] wl[1]
++ wl_n[2] wl_n[3] wl[2] wl[3] wl_n[4] wl_n[5] wl[4] wl[5] wl_n[6] wl_n[7] wl[6]
++ wl[7] wl_n[8] wl_n[9] wl[8] wl[9] wl_n[10] wl_n[11] wl[10] wl[11] wl_n[12]
++ wl_n[13] wl[12] wl[13] wl_n[14] wl_n[15] wl[14] wl[15] wl_n[16] wl_n[17]
++ wl[16] wl[17] wl_n[18] wl_n[19] wl[18] wl[19] wl_n[20] wl_n[21] wl[20] wl[21]
++ wl_n[22] wl_n[23] wl[22] wl[23] wl_n[24] wl_n[25] wl[24] wl[25] wl_n[26]
++ wl_n[27] wl[26] wl[27] wl_n[28] wl_n[29] wl[28] wl[29] wl_n[30] wl_n[31]
++ wl[30] wl[31] wl_n[32] wl_n[33] wl[32] wl[33] wl_n[34] wl_n[35] wl[34] wl[35]
++ wl_n[36] wl_n[37] wl[36] wl[37] wl_n[38] wl_n[39] wl[38] wl[39] wl_n[40]
++ wl_n[41] wl[40] wl[41] wl_n[42] wl_n[43] wl[42] wl[43] wl_n[44] wl_n[45]
++ wl[44] wl[45] wl_n[46] wl_n[47] wl[46] wl[47] wl_n[48] wl_n[49] wl[48] wl[49]
++ wl_n[50] wl_n[51] wl[50] wl[51] wl_n[52] wl_n[53] wl[52] wl[53] wl_n[54]
++ wl_n[55] wl[54] wl[55] wl_n[56] wl_n[57] wl[56] wl[57] wl_n[58] wl_n[59]
++ wl[58] wl[59] wl_n[60] wl_n[61] wl[60] wl[61] wl_n[62] wl_n[63] wl[62] wl[63]
++ vdd wl_n[64] wl[64] wl[65] wl_n[65] wl_n[66] wl_n[67] wl[66] wl[67] wl_n[68]
++ wl_n[69] wl[68] wl[69] wl_n[70] wl_n[71] wl[70] wl[71] wl_n[72] wl_n[73]
++ wl[72] wl[73] wl_n[74] wl_n[75] wl[74] wl[75] wl_n[76] wl_n[77] wl[76] wl[77]
++ wl_n[78] wl_n[79] wl[78] wl[79] wl_n[80] wl_n[81] wl[80] wl[81] wl_n[82]
++ wl_n[83] wl[82] wl[83] wl_n[84] wl_n[85] wl[84] wl[85] wl_n[86] wl_n[87]
++ wl[86] wl[87] wl_n[88] wl_n[89] wl[88] wl[89] wl_n[90] wl_n[91] wl[90] wl[91]
++ wl_n[92] wl_n[93] wl[92] wl[93] wl_n[94] wl_n[95] wl[94] wl[95] wl_n[96]
++ wl_n[97] wl[96] wl[97] wl_n[98] wl_n[99] wl[98] wl[99] wl_n[100] wl_n[101]
++ wl[100] wl[101] wl_n[102] wl_n[103] wl[102] wl[103] wl_n[104] wl_n[105]
++ wl[104] wl[105] wl_n[106] wl_n[107] wl[106] wl[107] wl_n[108] wl_n[109]
++ wl[108] wl[109] wl_n[110] wl_n[111] wl[110] wl[111] wl_n[112] wl_n[113]
++ wl[112] wl[113] wl_n[114] wl_n[115] wl[114] wl[115] wl_n[116] wl_n[117]
++ wl[116] wl[117] wl_n[118] wl_n[119] wl[118] wl[119] wl_n[120] wl_n[121]
++ wl[120] wl[121] wl_n[122] wl_n[123] wl[122] wl[123] wl_n[124] wl_n[125]
++ wl[124] wl[125] wl_n[126] wl_n[127] wl[126] wl[127]
+X$1 vdd vss wl_n[0] wl[0] SPDICEWLDriver_N26L400WP26L800W
+X$2 vdd vss wl_n[1] wl[1] SPDICEWLDriver_N26L400WP26L800W
+X$3 vdd vss wl_n[2] wl[2] SPDICEWLDriver_N26L400WP26L800W
+X$4 vdd vss wl_n[3] wl[3] SPDICEWLDriver_N26L400WP26L800W
+X$5 vdd vss wl_n[4] wl[4] SPDICEWLDriver_N26L400WP26L800W
+X$6 vdd vss wl_n[5] wl[5] SPDICEWLDriver_N26L400WP26L800W
+X$7 vdd vss wl_n[6] wl[6] SPDICEWLDriver_N26L400WP26L800W
+X$8 vdd vss wl_n[7] wl[7] SPDICEWLDriver_N26L400WP26L800W
+X$9 vdd vss wl_n[8] wl[8] SPDICEWLDriver_N26L400WP26L800W
+X$10 vdd vss wl_n[9] wl[9] SPDICEWLDriver_N26L400WP26L800W
+X$11 vdd vss wl_n[10] wl[10] SPDICEWLDriver_N26L400WP26L800W
+X$12 vdd vss wl_n[11] wl[11] SPDICEWLDriver_N26L400WP26L800W
+X$13 vdd vss wl_n[12] wl[12] SPDICEWLDriver_N26L400WP26L800W
+X$14 vdd vss wl_n[13] wl[13] SPDICEWLDriver_N26L400WP26L800W
+X$15 vdd vss wl_n[14] wl[14] SPDICEWLDriver_N26L400WP26L800W
+X$16 vdd vss wl_n[15] wl[15] SPDICEWLDriver_N26L400WP26L800W
+X$17 vdd vss wl_n[16] wl[16] SPDICEWLDriver_N26L400WP26L800W
+X$18 vdd vss wl_n[17] wl[17] SPDICEWLDriver_N26L400WP26L800W
+X$19 vdd vss wl_n[18] wl[18] SPDICEWLDriver_N26L400WP26L800W
+X$20 vdd vss wl_n[19] wl[19] SPDICEWLDriver_N26L400WP26L800W
+X$21 vdd vss wl_n[20] wl[20] SPDICEWLDriver_N26L400WP26L800W
+X$22 vdd vss wl_n[21] wl[21] SPDICEWLDriver_N26L400WP26L800W
+X$23 vdd vss wl_n[22] wl[22] SPDICEWLDriver_N26L400WP26L800W
+X$24 vdd vss wl_n[23] wl[23] SPDICEWLDriver_N26L400WP26L800W
+X$25 vdd vss wl_n[24] wl[24] SPDICEWLDriver_N26L400WP26L800W
+X$26 vdd vss wl_n[25] wl[25] SPDICEWLDriver_N26L400WP26L800W
+X$27 vdd vss wl_n[26] wl[26] SPDICEWLDriver_N26L400WP26L800W
+X$28 vdd vss wl_n[27] wl[27] SPDICEWLDriver_N26L400WP26L800W
+X$29 vdd vss wl_n[28] wl[28] SPDICEWLDriver_N26L400WP26L800W
+X$30 vdd vss wl_n[29] wl[29] SPDICEWLDriver_N26L400WP26L800W
+X$31 vdd vss wl_n[30] wl[30] SPDICEWLDriver_N26L400WP26L800W
+X$32 vdd vss wl_n[31] wl[31] SPDICEWLDriver_N26L400WP26L800W
+X$33 vdd vss wl_n[32] wl[32] SPDICEWLDriver_N26L400WP26L800W
+X$34 vdd vss wl_n[33] wl[33] SPDICEWLDriver_N26L400WP26L800W
+X$35 vdd vss wl_n[34] wl[34] SPDICEWLDriver_N26L400WP26L800W
+X$36 vdd vss wl_n[35] wl[35] SPDICEWLDriver_N26L400WP26L800W
+X$37 vdd vss wl_n[36] wl[36] SPDICEWLDriver_N26L400WP26L800W
+X$38 vdd vss wl_n[37] wl[37] SPDICEWLDriver_N26L400WP26L800W
+X$39 vdd vss wl_n[38] wl[38] SPDICEWLDriver_N26L400WP26L800W
+X$40 vdd vss wl_n[39] wl[39] SPDICEWLDriver_N26L400WP26L800W
+X$41 vdd vss wl_n[40] wl[40] SPDICEWLDriver_N26L400WP26L800W
+X$42 vdd vss wl_n[41] wl[41] SPDICEWLDriver_N26L400WP26L800W
+X$43 vdd vss wl_n[42] wl[42] SPDICEWLDriver_N26L400WP26L800W
+X$44 vdd vss wl_n[43] wl[43] SPDICEWLDriver_N26L400WP26L800W
+X$45 vdd vss wl_n[44] wl[44] SPDICEWLDriver_N26L400WP26L800W
+X$46 vdd vss wl_n[45] wl[45] SPDICEWLDriver_N26L400WP26L800W
+X$47 vdd vss wl_n[46] wl[46] SPDICEWLDriver_N26L400WP26L800W
+X$48 vdd vss wl_n[47] wl[47] SPDICEWLDriver_N26L400WP26L800W
+X$49 vdd vss wl_n[48] wl[48] SPDICEWLDriver_N26L400WP26L800W
+X$50 vdd vss wl_n[49] wl[49] SPDICEWLDriver_N26L400WP26L800W
+X$51 vdd vss wl_n[50] wl[50] SPDICEWLDriver_N26L400WP26L800W
+X$52 vdd vss wl_n[51] wl[51] SPDICEWLDriver_N26L400WP26L800W
+X$53 vdd vss wl_n[52] wl[52] SPDICEWLDriver_N26L400WP26L800W
+X$54 vdd vss wl_n[53] wl[53] SPDICEWLDriver_N26L400WP26L800W
+X$55 vdd vss wl_n[54] wl[54] SPDICEWLDriver_N26L400WP26L800W
+X$56 vdd vss wl_n[55] wl[55] SPDICEWLDriver_N26L400WP26L800W
+X$57 vdd vss wl_n[56] wl[56] SPDICEWLDriver_N26L400WP26L800W
+X$58 vdd vss wl_n[57] wl[57] SPDICEWLDriver_N26L400WP26L800W
+X$59 vdd vss wl_n[58] wl[58] SPDICEWLDriver_N26L400WP26L800W
+X$60 vdd vss wl_n[59] wl[59] SPDICEWLDriver_N26L400WP26L800W
+X$61 vdd vss wl_n[60] wl[60] SPDICEWLDriver_N26L400WP26L800W
+X$62 vdd vss wl_n[61] wl[61] SPDICEWLDriver_N26L400WP26L800W
+X$63 vdd vss wl_n[62] wl[62] SPDICEWLDriver_N26L400WP26L800W
+X$64 vdd vss wl_n[63] wl[63] SPDICEWLDriver_N26L400WP26L800W
+X$65 vdd vss wl_n[64] wl[64] SPDICEWLDriver_N26L400WP26L800W
+X$66 vdd vss wl_n[65] wl[65] SPDICEWLDriver_N26L400WP26L800W
+X$67 vdd vss wl_n[66] wl[66] SPDICEWLDriver_N26L400WP26L800W
+X$68 vdd vss wl_n[67] wl[67] SPDICEWLDriver_N26L400WP26L800W
+X$69 vdd vss wl_n[68] wl[68] SPDICEWLDriver_N26L400WP26L800W
+X$70 vdd vss wl_n[69] wl[69] SPDICEWLDriver_N26L400WP26L800W
+X$71 vdd vss wl_n[70] wl[70] SPDICEWLDriver_N26L400WP26L800W
+X$72 vdd vss wl_n[71] wl[71] SPDICEWLDriver_N26L400WP26L800W
+X$73 vdd vss wl_n[72] wl[72] SPDICEWLDriver_N26L400WP26L800W
+X$74 vdd vss wl_n[73] wl[73] SPDICEWLDriver_N26L400WP26L800W
+X$75 vdd vss wl_n[74] wl[74] SPDICEWLDriver_N26L400WP26L800W
+X$76 vdd vss wl_n[75] wl[75] SPDICEWLDriver_N26L400WP26L800W
+X$77 vdd vss wl_n[76] wl[76] SPDICEWLDriver_N26L400WP26L800W
+X$78 vdd vss wl_n[77] wl[77] SPDICEWLDriver_N26L400WP26L800W
+X$79 vdd vss wl_n[78] wl[78] SPDICEWLDriver_N26L400WP26L800W
+X$80 vdd vss wl_n[79] wl[79] SPDICEWLDriver_N26L400WP26L800W
+X$81 vdd vss wl_n[80] wl[80] SPDICEWLDriver_N26L400WP26L800W
+X$82 vdd vss wl_n[81] wl[81] SPDICEWLDriver_N26L400WP26L800W
+X$83 vdd vss wl_n[82] wl[82] SPDICEWLDriver_N26L400WP26L800W
+X$84 vdd vss wl_n[83] wl[83] SPDICEWLDriver_N26L400WP26L800W
+X$85 vdd vss wl_n[84] wl[84] SPDICEWLDriver_N26L400WP26L800W
+X$86 vdd vss wl_n[85] wl[85] SPDICEWLDriver_N26L400WP26L800W
+X$87 vdd vss wl_n[86] wl[86] SPDICEWLDriver_N26L400WP26L800W
+X$88 vdd vss wl_n[87] wl[87] SPDICEWLDriver_N26L400WP26L800W
+X$89 vdd vss wl_n[88] wl[88] SPDICEWLDriver_N26L400WP26L800W
+X$90 vdd vss wl_n[89] wl[89] SPDICEWLDriver_N26L400WP26L800W
+X$91 vdd vss wl_n[90] wl[90] SPDICEWLDriver_N26L400WP26L800W
+X$92 vdd vss wl_n[91] wl[91] SPDICEWLDriver_N26L400WP26L800W
+X$93 vdd vss wl_n[92] wl[92] SPDICEWLDriver_N26L400WP26L800W
+X$94 vdd vss wl_n[93] wl[93] SPDICEWLDriver_N26L400WP26L800W
+X$95 vdd vss wl_n[94] wl[94] SPDICEWLDriver_N26L400WP26L800W
+X$96 vdd vss wl_n[95] wl[95] SPDICEWLDriver_N26L400WP26L800W
+X$97 vdd vss wl_n[96] wl[96] SPDICEWLDriver_N26L400WP26L800W
+X$98 vdd vss wl_n[97] wl[97] SPDICEWLDriver_N26L400WP26L800W
+X$99 vdd vss wl_n[98] wl[98] SPDICEWLDriver_N26L400WP26L800W
+X$100 vdd vss wl_n[99] wl[99] SPDICEWLDriver_N26L400WP26L800W
+X$101 vdd vss wl_n[100] wl[100] SPDICEWLDriver_N26L400WP26L800W
+X$102 vdd vss wl_n[101] wl[101] SPDICEWLDriver_N26L400WP26L800W
+X$103 vdd vss wl_n[102] wl[102] SPDICEWLDriver_N26L400WP26L800W
+X$104 vdd vss wl_n[103] wl[103] SPDICEWLDriver_N26L400WP26L800W
+X$105 vdd vss wl_n[104] wl[104] SPDICEWLDriver_N26L400WP26L800W
+X$106 vdd vss wl_n[105] wl[105] SPDICEWLDriver_N26L400WP26L800W
+X$107 vdd vss wl_n[106] wl[106] SPDICEWLDriver_N26L400WP26L800W
+X$108 vdd vss wl_n[107] wl[107] SPDICEWLDriver_N26L400WP26L800W
+X$109 vdd vss wl_n[108] wl[108] SPDICEWLDriver_N26L400WP26L800W
+X$110 vdd vss wl_n[109] wl[109] SPDICEWLDriver_N26L400WP26L800W
+X$111 vdd vss wl_n[110] wl[110] SPDICEWLDriver_N26L400WP26L800W
+X$112 vdd vss wl_n[111] wl[111] SPDICEWLDriver_N26L400WP26L800W
+X$113 vdd vss wl_n[112] wl[112] SPDICEWLDriver_N26L400WP26L800W
+X$114 vdd vss wl_n[113] wl[113] SPDICEWLDriver_N26L400WP26L800W
+X$115 vdd vss wl_n[114] wl[114] SPDICEWLDriver_N26L400WP26L800W
+X$116 vdd vss wl_n[115] wl[115] SPDICEWLDriver_N26L400WP26L800W
+X$117 vdd vss wl_n[116] wl[116] SPDICEWLDriver_N26L400WP26L800W
+X$118 vdd vss wl_n[117] wl[117] SPDICEWLDriver_N26L400WP26L800W
+X$119 vdd vss wl_n[118] wl[118] SPDICEWLDriver_N26L400WP26L800W
+X$120 vdd vss wl_n[119] wl[119] SPDICEWLDriver_N26L400WP26L800W
+X$121 vdd vss wl_n[120] wl[120] SPDICEWLDriver_N26L400WP26L800W
+X$122 vdd vss wl_n[121] wl[121] SPDICEWLDriver_N26L400WP26L800W
+X$123 vdd vss wl_n[122] wl[122] SPDICEWLDriver_N26L400WP26L800W
+X$124 vdd vss wl_n[123] wl[123] SPDICEWLDriver_N26L400WP26L800W
+X$125 vdd vss wl_n[124] wl[124] SPDICEWLDriver_N26L400WP26L800W
+X$126 vdd vss wl_n[125] wl[125] SPDICEWLDriver_N26L400WP26L800W
+X$127 vdd vss wl_n[126] wl[126] SPDICEWLDriver_N26L400WP26L800W
+X$128 vdd vss wl_n[127] wl[127] SPDICEWLDriver_N26L400WP26L800W
+.ENDS SPDICEWLDriverCol_128RN26L400WP26L800W
+
+.SUBCKT SPDICERowPeriph_PD3B4B_LD2B2R vss mux[0] vdd a[0] decodeclk mux[1] a[1]
++ mux[2] mux[3] a[2] wl_n[0] wl_n[1] wl_n[2] wl_n[3] wl_n[4] wl_n[5] a[3]
++ wl_n[6] wl_n[7] a[4] wl_n[8] wl_n[9] wl_n[10] wl_n[11] wl_n[12] wl_n[13] a[5]
++ wl_n[14] wl_n[15] wl_n[16] wl_n[17] a[6] wl_n[18] wl_n[19] wl_n[20] wl_n[21]
++ wl_n[22] wl_n[23] a[7] wl_n[24] wl_n[25] wl_n[26] a[8] wl_n[27] wl_n[28]
++ wl_n[29] wl_n[30] wl_n[31] wl_n[32] wl_n[33] wl_n[34] wl_n[35] wl_n[36]
++ wl_n[37] wl_n[38] wl_n[39] wl_n[40] wl_n[41] wl_n[42] wl_n[43] wl_n[44]
++ wl_n[45] wl_n[46] wl_n[47] wl_n[48] wl_n[49] wl_n[50] wl_n[51] wl_n[52]
++ wl_n[53] wl_n[54] wl_n[55] wl_n[56] wl_n[57] wl_n[58] wl_n[59] wl_n[60]
++ wl_n[61] wl_n[62] wl_en wl_n[63] wl_n[64] wl_n[65] wl_n[66] wl_n[67] wl_n[68]
++ wl_n[69] wl_n[70] wl_n[71] wl_n[72] wl_n[73] wl_n[74] wl_n[75] wl_n[76]
++ wl_n[77] wl_n[78] wl_n[79] wl_n[80] wl_n[81] wl_n[82] wl_n[83] wl_n[84]
++ wl_n[85] wl_n[86] wl_n[87] wl_n[88] wl_n[89] wl_n[90] wl_n[91] wl_n[92]
++ wl_n[93] wl_n[94] wl_n[95] wl_n[96] wl_n[97] wl_n[98] wl_n[99] wl_n[100]
++ wl_n[101] wl_n[102] wl_n[103] wl_n[104] wl_n[105] wl_n[106] wl_n[107]
++ wl_n[108] wl_n[109] wl_n[110] wl_n[111] wl_n[112] wl_n[113] wl_n[114]
++ wl_n[115] wl_n[116] wl_n[117] wl_n[118] wl_n[119] wl_n[120] wl_n[121]
++ wl_n[122] wl_n[123] wl_n[124] wl_n[125] wl_n[126] wl_n[127]
+X$1 vss vdd a[0] a[1] mux[0] mux[1] mux[2] mux[3] decodeclk
++ SPDICEDirectColDec_A2B2R
+X$2 vss vdd wl_n[0] a[2] wl_n[2] wl_n[1] wl_n[3] wl_n[4] a[3] wl_n[5] wl_n[6]
++ wl_n[8] wl_n[7] a[4] wl_n[9] wl_n[11] wl_n[10] decodeclk wl_n[13] wl_n[12]
++ a[5] wl_n[14] wl_n[15] wl_n[17] wl_n[16] wl_n[18] a[6] wl_n[19] wl_n[21]
++ wl_n[20] wl_n[22] a[7] wl_n[23] wl_n[24] wl_n[25] wl_n[27] wl_n[26] a[8]
++ wl_n[28] wl_n[29] wl_n[30] wl_n[32] wl_n[31] wl_n[33] wl_n[34] wl_n[35]
++ wl_n[36] wl_n[38] wl_n[37] wl_n[40] wl_n[39] wl_n[41] wl_n[42] wl_n[43]
++ wl_n[44] wl_n[46] wl_n[45] wl_n[47] wl_n[49] wl_n[48] wl_n[50] wl_n[51]
++ wl_n[53] wl_n[52] wl_n[54] wl_n[55] wl_n[57] wl_n[56] wl_n[58] wl_n[59]
++ wl_n[60] wl_n[61] wl_n[62] wl_en wl_n[63] wl_n[65] wl_n[64] wl_n[66] wl_n[67]
++ wl_n[68] wl_n[69] wl_n[70] wl_n[71] wl_n[73] wl_n[72] wl_n[74] wl_n[75]
++ wl_n[76] wl_n[77] wl_n[78] wl_n[79] wl_n[81] wl_n[80] wl_n[82] wl_n[83]
++ wl_n[84] wl_n[85] wl_n[86] wl_n[87] wl_n[88] wl_n[89] wl_n[90] wl_n[91]
++ wl_n[92] wl_n[93] wl_n[94] wl_n[95] wl_n[97] wl_n[96] wl_n[98] wl_n[99]
++ wl_n[101] wl_n[100] wl_n[102] wl_n[103] wl_n[105] wl_n[104] wl_n[106]
++ wl_n[107] wl_n[108] wl_n[109] wl_n[110] wl_n[111] wl_n[113] wl_n[112]
++ wl_n[114] wl_n[115] wl_n[116] wl_n[117] wl_n[118] wl_n[119] wl_n[121]
++ wl_n[120] wl_n[122] wl_n[123] wl_n[125] wl_n[124] wl_n[126] wl_n[127]
++ SPDICERowDec_PD3B4B_PAG3B4B1
+.ENDS SPDICERowPeriph_PD3B4B_LD2B2R
+
+.SUBCKT SPDICENonOvlClock_4S11341D1R vss vdd firststage[3] secondstage[3] clk
+X$1 vss vdd secondstage[4] secondstage[3] inv_x0
+X$2 vss vdd secondstage[3] secondstage[2] inv_x0
+X$3 vss vdd secondstage[2] secondstage[1] inv_x0
+X$4 vss vdd secondstage[1] secondstage[0] inv_x0
+X$5 vss vdd \$15 secondstage[0] firststage[4] nand2_x0
+X$6 vss vdd \$15 clk inv_x0
+X$7 vss vdd clk firststage[0] secondstage[4] nand2_x0
+X$8 vss vdd firststage[1] firststage[0] inv_x0
+X$9 vss vdd firststage[2] firststage[1] inv_x0
+X$10 vss vdd firststage[3] firststage[2] inv_x0
+X$11 vss vdd firststage[4] firststage[3] inv_x0
+.ENDS SPDICENonOvlClock_4S11341D1R
+
+.SUBCKT inv_x3 vss vdd nq i
+M$1 vss i nq vss sg13_lv_nmos L=0.13u W=4.38u AS=1.0512p AD=1.0512p PS=7.28u
++ PD=7.28u
+M$4 vdd i nq vdd sg13_lv_pmos L=0.13u W=4.35u AS=1.044p AD=1.044p PS=7.24u
++ PD=7.24u
+.ENDS inv_x3
+
+.SUBCKT buf_x4 vdd vss i q
+M$1 \$1 i vss vss sg13_lv_nmos L=0.13u W=1.07u AS=0.3638p AD=0.214p PS=2.82u
++ PD=1.47u
+M$2 vss \$1 q vss sg13_lv_nmos L=0.13u W=4.28u AS=0.8239p AD=0.9737p PS=5.82u
++ PD=7.17u
+M$6 \$1 i vdd vdd sg13_lv_pmos L=0.13u W=1.06u AS=0.3604p AD=0.212p PS=2.8u
++ PD=1.46u
+M$7 vdd \$1 q vdd sg13_lv_pmos L=0.13u W=4.24u AS=0.8162p AD=0.9646p PS=5.78u
++ PD=7.12u
+.ENDS buf_x4
+
+.SUBCKT buf_x1 vdd vss i q
+M$1 \$1 i vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.2092p PS=2.24u
++ PD=1.48u
+M$2 vss \$1 q vss sg13_lv_nmos L=0.13u W=1.07u AS=0.2092p AD=0.3638p PS=1.48u
++ PD=2.82u
+M$3 vdd i \$1 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2075p AD=0.2652p PS=1.47u
++ PD=2.24u
+M$4 vdd \$1 q vdd sg13_lv_pmos L=0.13u W=1.06u AS=0.2075p AD=0.3604p PS=1.47u
++ PD=2.8u
+.ENDS buf_x1
+
+.SUBCKT SPDICEColumn_128R_CP8B_CM4MN26L580W1R_PC26L100W vss d[0] q[0] d[1] q[1]
++ d[2] q[2] d[3] q[3] d[4] q[4] d[5] q[5] d[6] q[6] d[7] q[7] we clk we_en vdd
++ mux[0] mux[1] mux[2] mux[3] precharge_n wl[9] wl[21] wl[3] wl[23] wl[4] wl[5]
++ wl[6] wl[8] wl[22] wl[20] wl[7] wl[18] wl[2] wl[13] wl[1] wl[0] wl[26] wl[12]
++ wl[14] wl[25] wl[11] wl[24] wl[10] wl[15] wl[16] wl[17] wl[19] wl[53] wl[55]
++ wl[38] wl[54] wl[42] wl[52] wl[51] wl[50] wl[49] wl[39] wl[48] wl[47] wl[46]
++ wl[45] wl[44] wl[40] wl[43] wl[27] wl[41] wl[36] wl[35] wl[34] wl[33] wl[32]
++ wl[31] wl[30] wl[29] wl[28] wl[37] wl[58] wl[56] wl[57] wl[73] wl[72] wl[87]
++ wl[74] wl[75] wl[88] wl[76] wl[77] wl[78] wl[79] wl[86] wl[80] wl[81] wl[82]
++ wl[83] wl[84] wl[85] wl[104] wl[59] wl[96] wl[97] wl[98] wl[99] wl[100]
++ wl[101] wl[102] wl[103] wl[70] wl[105] wl[106] wl[107] wl[108] wl[109]
++ wl[110] wl[111] wl[112] wl[113] wl[60] wl[71] wl[89] wl[69] wl[68] wl[90]
++ wl[67] wl[66] wl[91] wl[65] wl[64] wl[92] wl[63] wl[93] wl[62] wl[61] wl[94]
++ wl[95] wl[116] wl[122] wl[123] wl[117] wl[124] wl[121] wl[115] wl[127]
++ wl[125] wl[118] wl[114] wl[120] wl[126] wl[119]
+X$1 vss we d[0] d[1] vdd d[2] d[3] d[4] d[5] d[6] d[7] clk we_en q[0] q[1] q[2]
++ q[3] q[4] q[5] q[6] q[7] mux[0] mux[2] mux[1] precharge_n mux[3] \$135 \$134
++ \$133 \$132 \$131 \$130 \$129 \$128 \$127 \$126 \$125 \$124 \$123 \$121 \$149
++ \$148 \$147 \$146 \$145 \$144 \$143 \$142 \$141 \$140 \$139 \$138 \$137 \$136
++ \$154 \$153 \$152 \$151 \$150 \$173 \$171 \$170 \$169 \$167 \$165 \$164 \$163
++ \$161 \$160 \$159 \$158 \$157 \$156 \$155 \$162 \$166 \$168 \$172 \$175 \$179
++ \$181 \$184 \$183 \$182 \$180 \$178 \$177 \$176 \$174 \$122 vdd
++ SPDICEColPeriph8B_PC26L100W_CM4MN26L580W1R
+X$2 vss wl[19] wl[26] wl[23] wl[22] wl[20] wl[21] wl[34] wl[41] wl[39] wl[42]
++ wl[38] wl[43] wl[44] wl[37] wl[45] wl[36] wl[46] wl[47] wl[35] wl[48] wl[24]
++ wl[49] wl[50] wl[33] wl[52] wl[32] wl[51] wl[31] wl[30] wl[29] wl[28] wl[27]
++ wl[40] wl[25] wl[17] wl[3] wl[2] wl[4] wl[1] wl[5] wl[0] wl[18] wl[6] wl[7]
++ wl[8] wl[9] wl[10] wl[11] wl[12] wl[13] wl[14] wl[15] wl[16] \$135 vdd \$134
++ \$133 \$132 \$131 \$130 \$129 \$128 \$127 \$126 \$125 \$124 \$123 \$121 \$149
++ \$148 \$147 \$146 \$145 \$144 \$143 \$142 \$141 \$140 \$139 \$138 \$137 \$136
++ \$154 \$153 \$152 \$151 wl[61] wl[62] wl[63] wl[57] wl[59] wl[58] wl[56]
++ wl[55] wl[54] wl[53] wl[60] \$150 \$173 \$171 \$170 \$169 \$167 \$165 \$164
++ \$163 \$161 \$160 \$159 \$158 \$157 \$156 \$155 \$162 \$166 \$168 \$172 \$175
++ \$179 \$181 \$184 \$183 \$182 \$180 \$178 \$177 \$176 \$174 \$122 wl[95]
++ wl[108] wl[96] wl[94] wl[97] wl[98] wl[80] wl[99] wl[109] wl[79] wl[78]
++ wl[100] wl[101] wl[93] wl[107] wl[102] wl[103] wl[77] wl[106] wl[104] wl[76]
++ wl[105] wl[127] wl[119] wl[83] wl[112] wl[82] wl[125] wl[85] wl[113] wl[114]
++ wl[124] wl[115] wl[123] wl[116] wl[117] wl[122] wl[118] wl[84] wl[121]
++ wl[120] wl[126] wl[86] wl[87] wl[111] wl[88] wl[89] wl[90] wl[110] wl[81]
++ wl[91] wl[92] wl[74] wl[75] wl[64] wl[65] wl[66] wl[67] wl[68] wl[69] wl[70]
++ wl[71] wl[72] wl[73] SPDICEArray_128X32BC
+.ENDS SPDICEColumn_128R_CP8B_CM4MN26L580W1R_PC26L100W
+
+.SUBCKT SPDICEWLDriver_N26L400WP26L800W vdd vss wl_n wl_drive
+M$1 vss wl_n wl_drive vss sg13_lv_nmos L=0.13u W=4u AS=2.13p AD=2.13p PS=8.13u
++ PD=8.13u
+M$3 vdd wl_n wl_drive vdd sg13_lv_pmos L=0.13u W=8u AS=4.26p AD=4.26p PS=14.13u
++ PD=14.13u
+.ENDS SPDICEWLDriver_N26L400WP26L800W
+
+.SUBCKT SPDICERowDec_PD3B4B_PAG3B4B1 vss vdd wl_n[0] a[0] wl_n[2] wl_n[1]
++ wl_n[3] wl_n[4] a[1] wl_n[5] wl_n[6] wl_n[8] wl_n[7] a[2] wl_n[9] wl_n[11]
++ wl_n[10] clk wl_n[13] wl_n[12] a[3] wl_n[14] wl_n[15] wl_n[17] wl_n[16]
++ wl_n[18] a[4] wl_n[19] wl_n[21] wl_n[20] wl_n[22] a[5] wl_n[23] wl_n[24]
++ wl_n[25] wl_n[27] wl_n[26] a[6] wl_n[28] wl_n[29] wl_n[30] wl_n[32] wl_n[31]
++ wl_n[33] wl_n[34] wl_n[35] wl_n[36] wl_n[38] wl_n[37] wl_n[40] wl_n[39]
++ wl_n[41] wl_n[42] wl_n[43] wl_n[44] wl_n[46] wl_n[45] wl_n[47] wl_n[49]
++ wl_n[48] wl_n[50] wl_n[51] wl_n[53] wl_n[52] wl_n[54] wl_n[55] wl_n[57]
++ wl_n[56] wl_n[58] wl_n[59] wl_n[60] wl_n[61] wl_n[62] wl_en wl_n[63] wl_n[65]
++ wl_n[64] wl_n[66] wl_n[67] wl_n[68] wl_n[69] wl_n[70] wl_n[71] wl_n[73]
++ wl_n[72] wl_n[74] wl_n[75] wl_n[76] wl_n[77] wl_n[78] wl_n[79] wl_n[81]
++ wl_n[80] wl_n[82] wl_n[83] wl_n[84] wl_n[85] wl_n[86] wl_n[87] wl_n[88]
++ wl_n[89] wl_n[90] wl_n[91] wl_n[92] wl_n[93] wl_n[94] wl_n[95] wl_n[97]
++ wl_n[96] wl_n[98] wl_n[99] wl_n[101] wl_n[100] wl_n[102] wl_n[103] wl_n[105]
++ wl_n[104] wl_n[106] wl_n[107] wl_n[108] wl_n[109] wl_n[110] wl_n[111]
++ wl_n[113] wl_n[112] wl_n[114] wl_n[115] wl_n[116] wl_n[117] wl_n[118]
++ wl_n[119] wl_n[121] wl_n[120] wl_n[122] wl_n[123] wl_n[125] wl_n[124]
++ wl_n[126] wl_n[127]
+X$1 vss vdd \$3 \$6 \$8 \$22 \$13 \$16 \$17 \$21 \$40 \$27 \$65 \$82 \$97 \$115
++ \$133 \$148 \$164 \$175 \$191 \$209 \$224 \$236 \$250 \$269 clk a[0] a[1]
++ a[2] a[3] a[4] a[5] a[6] SPDICERowPredecoders_A3B4B
+X$2 wl_n[0] wl_n[1] wl_n[2] wl_n[3] wl_n[4] wl_n[5] wl_n[6] wl_n[7] wl_en \$22
++ \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss SPDICERowDecPage_PD3B4BSH
+X$3 wl_n[8] wl_n[9] wl_n[10] wl_n[11] wl_n[12] wl_n[13] wl_n[14] wl_n[15] wl_en
++ \$40 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss SPDICERowDecPage_PD3B4BSH
+X$4 wl_n[16] wl_n[17] wl_n[18] wl_n[19] wl_n[20] wl_n[21] wl_n[22] wl_n[23]
++ wl_en \$65 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$5 wl_n[24] wl_n[25] wl_n[26] wl_n[27] wl_n[28] wl_n[29] wl_n[30] wl_n[31]
++ wl_en \$82 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$6 wl_n[32] wl_n[33] wl_n[34] wl_n[35] wl_n[36] wl_n[37] wl_n[38] wl_n[39]
++ wl_en \$97 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$7 wl_n[40] wl_n[41] wl_n[42] wl_n[43] wl_n[44] wl_n[45] wl_n[46] wl_n[47]
++ wl_en \$115 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$8 wl_n[48] wl_n[49] wl_n[50] wl_n[51] wl_n[52] wl_n[53] wl_n[54] wl_n[55]
++ wl_en \$133 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$9 wl_n[56] wl_n[57] wl_n[58] wl_n[59] wl_n[60] wl_n[61] wl_n[62] wl_n[63]
++ wl_en \$148 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$10 wl_n[64] wl_n[65] wl_n[66] wl_n[67] wl_n[68] wl_n[69] wl_n[70] wl_n[71]
++ wl_en \$164 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$11 wl_n[72] wl_n[73] wl_n[74] wl_n[75] wl_n[76] wl_n[77] wl_n[78] wl_n[79]
++ wl_en \$175 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$12 wl_n[80] wl_n[81] wl_n[82] wl_n[83] wl_n[84] wl_n[85] wl_n[86] wl_n[87]
++ wl_en \$191 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$13 wl_n[88] wl_n[89] wl_n[90] wl_n[91] wl_n[92] wl_n[93] wl_n[94] wl_n[95]
++ wl_en \$209 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$14 wl_n[96] wl_n[97] wl_n[98] wl_n[99] wl_n[100] wl_n[101] wl_n[102]
++ wl_n[103] wl_en \$224 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$15 wl_n[104] wl_n[105] wl_n[106] wl_n[107] wl_n[108] wl_n[109] wl_n[110]
++ wl_n[111] wl_en \$236 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$16 wl_n[112] wl_n[113] wl_n[114] wl_n[115] wl_n[116] wl_n[117] wl_n[118]
++ wl_n[119] wl_en \$250 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+X$17 wl_n[120] wl_n[121] wl_n[122] wl_n[123] wl_n[124] wl_n[125] wl_n[126]
++ wl_n[127] wl_en \$269 \$3 \$6 \$8 \$13 \$16 \$17 \$21 \$27 vdd vss
++ SPDICERowDecPage_PD3B4BSH
+.ENDS SPDICERowDec_PD3B4B_PAG3B4B1
+
+.SUBCKT SPDICEDirectColDec_A2B2R vss vdd a[0] a[1] line[0] line[1] line[2]
++ line[3] clk
+X$1 vss a[0] \$11 clk vdd SP6T1Dec_dff_x1
+X$2 vss a[1] \$12 clk vdd SP6T1Dec_dff_x1
+X$3 vss vdd \$13 \$11 SP6T1Dec_inv_x1
+X$4 vss vdd \$13 \$16 \$14 SP6T1Dec_nand2_x0
+X$5 vss vdd line[0] \$16 SP6T1Dec_inv_x2
+X$6 vss vdd \$11 \$17 \$14 SP6T1Dec_nand2_x0
+X$7 vss vdd line[1] \$17 SP6T1Dec_inv_x2
+X$8 vss vdd \$13 \$18 \$12 SP6T1Dec_nand2_x0
+X$9 vss vdd \$14 \$12 SP6T1Dec_inv_x1
+X$10 vss vdd line[2] \$18 SP6T1Dec_inv_x2
+X$11 vss vdd \$11 \$19 \$12 SP6T1Dec_nand2_x0
+X$12 vss vdd line[3] \$19 SP6T1Dec_inv_x2
+.ENDS SPDICEDirectColDec_A2B2R
+
+.SUBCKT SPDICEArray_128X32BC vss wl[19] wl[26] wl[23] wl[22] wl[20] wl[21]
++ wl[34] wl[41] wl[39] wl[42] wl[38] wl[43] wl[44] wl[37] wl[45] wl[36] wl[46]
++ wl[47] wl[35] wl[48] wl[24] wl[49] wl[50] wl[33] wl[52] wl[32] wl[51] wl[31]
++ wl[30] wl[29] wl[28] wl[27] wl[40] wl[25] wl[17] wl[3] wl[2] wl[4] wl[1]
++ wl[5] wl[0] wl[18] wl[6] wl[7] wl[8] wl[9] wl[10] wl[11] wl[12] wl[13] wl[14]
++ wl[15] wl[16] bl_n[0] vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3]
++ bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] bl_n[8] bl[8] bl[9]
++ bl_n[9] bl_n[10] bl[10] bl[11] bl_n[11] bl_n[12] bl[12] bl[13] bl_n[13]
++ bl_n[14] bl[14] bl[15] bl_n[15] wl[61] wl[62] wl[63] wl[57] wl[59] wl[58]
++ wl[56] wl[55] wl[54] wl[53] wl[60] bl_n[16] bl[16] bl[17] bl_n[17] bl_n[18]
++ bl[18] bl[19] bl_n[19] bl_n[20] bl[20] bl[21] bl_n[21] bl_n[22] bl[22] bl[23]
++ bl_n[23] bl_n[24] bl[24] bl[25] bl_n[25] bl_n[26] bl[26] bl[27] bl_n[27]
++ bl_n[28] bl[28] bl[29] bl_n[29] bl_n[30] bl[30] bl[31] bl_n[31] wl[95]
++ wl[108] wl[96] wl[94] wl[97] wl[98] wl[80] wl[99] wl[109] wl[79] wl[78]
++ wl[100] wl[101] wl[93] wl[107] wl[102] wl[103] wl[77] wl[106] wl[104] wl[76]
++ wl[105] wl[127] wl[119] wl[83] wl[112] wl[82] wl[125] wl[85] wl[113] wl[114]
++ wl[124] wl[115] wl[123] wl[116] wl[117] wl[122] wl[118] wl[84] wl[121]
++ wl[120] wl[126] wl[86] wl[87] wl[111] wl[88] wl[89] wl[90] wl[110] wl[81]
++ wl[91] wl[92] wl[74] wl[75] wl[64] wl[65] wl[66] wl[67] wl[68] wl[69] wl[70]
++ wl[71] wl[72] wl[73]
+X$2 vss wl[21] wl[24] wl[10] wl[23] wl[11] wl[22] wl[25] wl[12] wl[20] wl[13]
++ wl[19] wl[18] wl[14] wl[17] wl[15] wl[16] wl[4] wl[0] wl[1] wl[2] wl[3] wl[9]
++ wl[5] wl[6] wl[7] wl[8] wl[38] wl[37] wl[39] wl[41] wl[40] wl[48] wl[42]
++ wl[43] wl[35] wl[44] wl[53] wl[45] wl[52] wl[51] wl[46] wl[50] wl[47] wl[49]
++ wl[36] wl[34] wl[33] wl[32] wl[31] wl[30] wl[26] wl[27] wl[29] wl[28] bl_n[0]
++ vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] bl_n[4] bl[4] bl[5]
++ bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] wl[62] wl[63] wl[61] wl[58] wl[59] wl[57]
++ wl[56] wl[55] wl[54] wl[60] bl_n[8] bl[8] bl[9] bl_n[9] bl_n[10] bl[10]
++ bl[11] bl_n[11] bl_n[12] bl[12] bl[13] bl_n[13] bl_n[14] bl[14] bl[15]
++ bl_n[15] wl[81] wl[82] wl[94] wl[80] wl[95] wl[98] wl[79] wl[96] wl[78]
++ wl[99] wl[97] wl[93] wl[92] wl[90] wl[91] wl[83] wl[84] wl[85] wl[86] wl[87]
++ wl[88] wl[89] wl[103] wl[101] wl[69] wl[68] wl[102] wl[77] wl[109] wl[67]
++ wl[108] wl[76] wl[107] wl[106] wl[66] wl[105] wl[65] wl[64] wl[104] wl[70]
++ wl[75] wl[74] wl[73] wl[100] wl[72] wl[71] wl[113] wl[116] wl[114] wl[115]
++ wl[117] wl[118] wl[119] wl[120] wl[121] wl[122] wl[123] wl[124] wl[125]
++ wl[126] wl[127] wl[112] wl[110] wl[111] SPDICEArray_128X16
+X$4 vss wl[21] wl[24] wl[10] wl[23] wl[11] wl[22] wl[25] wl[12] wl[20] wl[13]
++ wl[19] wl[18] wl[14] wl[17] wl[15] wl[16] wl[4] wl[0] wl[1] wl[2] wl[3] wl[9]
++ wl[5] wl[6] wl[7] wl[8] wl[38] wl[37] wl[39] wl[41] wl[40] wl[48] wl[42]
++ wl[43] wl[35] wl[44] wl[53] wl[45] wl[52] wl[51] wl[46] wl[50] wl[47] wl[49]
++ wl[36] wl[34] wl[33] wl[32] wl[31] wl[30] wl[26] wl[27] wl[29] wl[28]
++ bl_n[16] vdd bl[16] bl[17] bl_n[17] bl_n[18] bl[18] bl[19] bl_n[19] bl_n[20]
++ bl[20] bl[21] bl_n[21] bl_n[22] bl[22] bl[23] bl_n[23] wl[62] wl[63] wl[61]
++ wl[58] wl[59] wl[57] wl[56] wl[55] wl[54] wl[60] bl_n[24] bl[24] bl[25]
++ bl_n[25] bl_n[26] bl[26] bl[27] bl_n[27] bl_n[28] bl[28] bl[29] bl_n[29]
++ bl_n[30] bl[30] bl[31] bl_n[31] wl[81] wl[82] wl[94] wl[80] wl[95] wl[98]
++ wl[79] wl[96] wl[78] wl[99] wl[97] wl[93] wl[92] wl[90] wl[91] wl[83] wl[84]
++ wl[85] wl[86] wl[87] wl[88] wl[89] wl[103] wl[101] wl[69] wl[68] wl[102]
++ wl[77] wl[109] wl[67] wl[108] wl[76] wl[107] wl[106] wl[66] wl[105] wl[65]
++ wl[64] wl[104] wl[70] wl[75] wl[74] wl[73] wl[100] wl[72] wl[71] wl[113]
++ wl[116] wl[114] wl[115] wl[117] wl[118] wl[119] wl[120] wl[121] wl[122]
++ wl[123] wl[124] wl[125] wl[126] wl[127] wl[112] wl[110] wl[111]
++ SPDICEArray_128X16
+.ENDS SPDICEArray_128X32BC
+
+.SUBCKT SPDICEColPeriph8B_PC26L100W_CM4MN26L580W1R vss we d[0] d[1] vdd d[2]
++ d[3] d[4] d[5] d[6] d[7] clk we_en q[0] q[1] q[2] q[3] q[4] q[5] q[6] q[7]
++ mux[0] mux[2] mux[1] precharge_n mux[3] bl_n[0] bl[0] bl[1] bl_n[1] bl_n[2]
++ bl[2] bl[3] bl_n[3] bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7]
++ bl_n[8] bl[8] bl[9] bl_n[9] bl_n[10] bl[10] bl[11] bl_n[11] bl_n[12] bl[12]
++ bl[13] bl_n[13] bl_n[14] bl[14] bl[15] bl_n[15] bl_n[16] bl[16] bl[17]
++ bl_n[17] bl_n[18] bl[18] bl[19] bl_n[19] bl_n[20] bl[20] bl[21] bl_n[21]
++ bl_n[22] bl[22] bl[23] bl_n[23] bl_n[24] bl[24] bl[25] bl_n[25] bl_n[26]
++ bl[26] bl[27] bl_n[27] bl_n[28] bl[28] bl[29] bl_n[29] bl_n[30] bl[30] bl[31]
++ bl_n[31] \$I249
+X$1 vss \$33 bl[4] bl_n[4] \$32 bl_n[5] bl[5] bl[6] bl_n[6] bl_n[7] bl[7]
++ mux[0] mux[1] mux[2] mux[3] SPDICEColMux_4MN26L580W1R
+X$2 vss \$31 bl[0] bl_n[0] \$30 bl_n[1] bl[1] bl[2] bl_n[2] bl_n[3] bl[3]
++ mux[0] mux[1] mux[2] mux[3] SPDICEColMux_4MN26L580W1R
+X$4 precharge_n vdd bl[0] bl_n[0] \$I249 SPDICEPrecharge_26L100WM
+X$5 precharge_n vdd bl[1] bl_n[1] \$I249 SPDICEPrecharge_26L100WM
+X$6 precharge_n vdd bl[2] bl_n[2] \$I249 SPDICEPrecharge_26L100WM
+X$7 precharge_n vdd bl[3] bl_n[3] \$I249 SPDICEPrecharge_26L100WM
+X$8 precharge_n vdd bl[4] bl_n[4] \$I249 SPDICEPrecharge_26L100WM
+X$9 precharge_n vdd bl[5] bl_n[5] \$I249 SPDICEPrecharge_26L100WM
+X$10 precharge_n vdd bl[6] bl_n[6] \$I249 SPDICEPrecharge_26L100WM
+X$11 precharge_n vdd bl[7] bl_n[7] \$I249 SPDICEPrecharge_26L100WM
+X$13 vss \$36 bl[8] bl_n[8] \$34 bl_n[9] bl[9] bl[10] bl_n[10] bl_n[11] bl[11]
++ mux[0] mux[1] mux[2] mux[3] SPDICEColMux_4MN26L580W1R
+X$14 vss \$38 bl[12] bl_n[12] \$37 bl_n[13] bl[13] bl[14] bl_n[14] bl_n[15]
++ bl[15] mux[0] mux[1] mux[2] mux[3] SPDICEColMux_4MN26L580W1R
+X$15 precharge_n vdd bl[8] bl_n[8] \$I249 SPDICEPrecharge_26L100WM
+X$16 precharge_n vdd bl[9] bl_n[9] \$I249 SPDICEPrecharge_26L100WM
+X$17 precharge_n vdd bl[10] bl_n[10] \$I249 SPDICEPrecharge_26L100WM
+X$18 precharge_n vdd bl[11] bl_n[11] \$I249 SPDICEPrecharge_26L100WM
+X$19 precharge_n vdd bl[12] bl_n[12] \$I249 SPDICEPrecharge_26L100WM
+X$20 precharge_n vdd bl[13] bl_n[13] \$I249 SPDICEPrecharge_26L100WM
+X$21 precharge_n vdd bl[14] bl_n[14] \$I249 SPDICEPrecharge_26L100WM
+X$22 precharge_n vdd bl[15] bl_n[15] \$I249 SPDICEPrecharge_26L100WM
+X$24 vss \$41 bl[16] bl_n[16] \$40 bl_n[17] bl[17] bl[18] bl_n[18] bl_n[19]
++ bl[19] mux[0] mux[1] mux[2] mux[3] SPDICEColMux_4MN26L580W1R
+X$25 vss \$42 bl[20] bl_n[20] \$43 bl_n[21] bl[21] bl[22] bl_n[22] bl_n[23]
++ bl[23] mux[0] mux[1] mux[2] mux[3] SPDICEColMux_4MN26L580W1R
+X$26 precharge_n vdd bl[16] bl_n[16] \$I249 SPDICEPrecharge_26L100WM
+X$27 precharge_n vdd bl[17] bl_n[17] \$I249 SPDICEPrecharge_26L100WM
+X$28 precharge_n vdd bl[18] bl_n[18] \$I249 SPDICEPrecharge_26L100WM
+X$29 precharge_n vdd bl[19] bl_n[19] \$I249 SPDICEPrecharge_26L100WM
+X$30 precharge_n vdd bl[20] bl_n[20] \$I249 SPDICEPrecharge_26L100WM
+X$31 precharge_n vdd bl[21] bl_n[21] \$I249 SPDICEPrecharge_26L100WM
+X$32 precharge_n vdd bl[22] bl_n[22] \$I249 SPDICEPrecharge_26L100WM
+X$33 precharge_n vdd bl[23] bl_n[23] \$I249 SPDICEPrecharge_26L100WM
+X$35 vss \$35 bl[24] bl_n[24] \$39 bl_n[25] bl[25] bl[26] bl_n[26] bl_n[27]
++ bl[27] mux[0] mux[1] mux[2] mux[3] SPDICEColMux_4MN26L580W1R
+X$36 vss \$29 bl[28] bl_n[28] \$28 bl_n[29] bl[29] bl[30] bl_n[30] bl_n[31]
++ bl[31] mux[0] mux[1] mux[2] mux[3] SPDICEColMux_4MN26L580W1R
+X$37 precharge_n vdd bl[24] bl_n[24] \$I249 SPDICEPrecharge_26L100WM
+X$38 precharge_n vdd bl[25] bl_n[25] \$I249 SPDICEPrecharge_26L100WM
+X$39 precharge_n vdd bl[26] bl_n[26] \$I249 SPDICEPrecharge_26L100WM
+X$40 precharge_n vdd bl[27] bl_n[27] \$I249 SPDICEPrecharge_26L100WM
+X$41 precharge_n vdd bl[28] bl_n[28] \$I249 SPDICEPrecharge_26L100WM
+X$42 precharge_n vdd bl[29] bl_n[29] \$I249 SPDICEPrecharge_26L100WM
+X$43 precharge_n vdd bl[30] bl_n[30] \$I249 SPDICEPrecharge_26L100WM
+X$44 precharge_n vdd bl[31] bl_n[31] \$I249 SPDICEPrecharge_26L100WM
+X$46 clk we we_en \$16 vss vdd \$12 SPDICEClockWE
+X$47 \$29 vss \$28 vdd q[7] d[7] \$12 \$16
++ SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+X$48 \$35 vss \$39 vdd q[6] d[6] \$12 \$16
++ SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+X$49 \$41 vss \$40 vdd q[4] d[4] \$12 \$16
++ SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+X$50 \$42 vss \$43 vdd q[5] d[5] \$12 \$16
++ SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+X$51 \$36 vss \$34 vdd q[2] d[2] \$12 \$16
++ SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+X$52 \$38 vss \$37 vdd q[3] d[3] \$12 \$16
++ SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+X$53 \$31 vss \$30 vdd q[0] d[0] \$12 \$16
++ SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+X$54 \$33 vss \$32 vdd q[1] d[1] \$12 \$16
++ SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+.ENDS SPDICEColPeriph8B_PC26L100W_CM4MN26L580W1R
+
+.SUBCKT SPDICERowDecPage_PD3B4BSH wl_n[0] wl_n[1] wl_n[2] wl_n[3] wl_n[4]
++ wl_n[5] wl_n[6] wl_n[7] wl_en page pd[0][0] pd[0][1] pd[0][2] pd[0][3]
++ pd[0][4] pd[0][5] pd[0][6] pd[0][7] vdd vss
+X$1 vss vdd pd[0][0] wl_n[0] page wl_en SPDICERowDecoderNand3
+X$2 vss vdd pd[0][1] wl_n[1] page wl_en SPDICERowDecoderNand3
+X$3 vss vdd pd[0][2] wl_n[2] page wl_en SPDICERowDecoderNand3
+X$4 vss vdd pd[0][3] wl_n[3] page wl_en SPDICERowDecoderNand3
+X$5 vss vdd pd[0][4] wl_n[4] page wl_en SPDICERowDecoderNand3
+X$6 vss vdd pd[0][5] wl_n[5] page wl_en SPDICERowDecoderNand3
+X$7 vss vdd pd[0][6] wl_n[6] page wl_en SPDICERowDecoderNand3
+X$8 vss vdd pd[0][7] wl_n[7] page wl_en SPDICERowDecoderNand3
+.ENDS SPDICERowDecPage_PD3B4BSH
+
+.SUBCKT SPDICERowPredecoders_A3B4B vss vdd pd[0][0] pd[0][1] pd[0][2] page[0]
++ pd[0][3] pd[0][4] pd[0][5] pd[0][6] page[1] pd[0][7] page[2] page[3] page[4]
++ page[5] page[6] page[7] page[8] page[9] page[10] page[11] page[12] page[13]
++ page[14] page[15] clk a[0] a[1] a[2] a[3] a[4] a[5] a[6]
+X$1 vdd vss \$27 \$28 \$29 pd[0][0] SP6T1Dec_and3_x1
+X$2 vdd vss \$30 \$28 \$29 pd[0][1] SP6T1Dec_and3_x1
+X$3 vdd vss \$27 \$31 \$29 pd[0][2] SP6T1Dec_and3_x1
+X$4 vdd vss \$32 \$33 \$34 \$35 page[0] SP6T1Dec_and4_x1
+X$5 vdd vss \$30 \$31 \$29 pd[0][3] SP6T1Dec_and3_x1
+X$6 vdd vss \$27 \$28 \$36 pd[0][4] SP6T1Dec_and3_x1
+X$7 vdd vss \$30 \$28 \$36 pd[0][5] SP6T1Dec_and3_x1
+X$8 vdd vss \$27 \$31 \$36 pd[0][6] SP6T1Dec_and3_x1
+X$9 vdd vss \$37 \$33 \$34 \$35 page[1] SP6T1Dec_and4_x1
+X$10 vdd vss \$30 \$31 \$36 pd[0][7] SP6T1Dec_and3_x1
+X$15 vdd vss \$32 \$38 \$34 \$35 page[2] SP6T1Dec_and4_x1
+X$20 vdd vss \$37 \$38 \$34 \$35 page[3] SP6T1Dec_and4_x1
+X$25 vdd vss \$32 \$33 \$46 \$35 page[4] SP6T1Dec_and4_x1
+X$30 vdd vss \$37 \$33 \$46 \$35 page[5] SP6T1Dec_and4_x1
+X$36 vdd vss \$32 \$38 \$46 \$35 page[6] SP6T1Dec_and4_x1
+X$41 vdd vss \$37 \$38 \$46 \$35 page[7] SP6T1Dec_and4_x1
+X$46 vdd vss \$32 \$33 \$34 \$48 page[8] SP6T1Dec_and4_x1
+X$51 vdd vss \$37 \$33 \$34 \$48 page[9] SP6T1Dec_and4_x1
+X$56 vdd vss \$32 \$38 \$34 \$48 page[10] SP6T1Dec_and4_x1
+X$62 vdd vss \$37 \$38 \$34 \$48 page[11] SP6T1Dec_and4_x1
+X$67 vdd vss \$32 \$33 \$46 \$48 page[12] SP6T1Dec_and4_x1
+X$72 vdd vss \$37 \$33 \$46 \$48 page[13] SP6T1Dec_and4_x1
+X$77 vdd vss \$32 \$38 \$46 \$48 page[14] SP6T1Dec_and4_x1
+X$83 vdd vss \$37 \$38 \$46 \$48 page[15] SP6T1Dec_and4_x1
+X$84 vss a[0] \$30 clk vdd SP6T1Dec_dff_x1
+X$85 vss vdd \$27 \$30 SP6T1Dec_inv_x1
+X$86 vss a[1] \$31 clk vdd SP6T1Dec_dff_x1
+X$87 vss vdd \$28 \$31 SP6T1Dec_inv_x1
+X$88 vss a[2] \$36 clk vdd SP6T1Dec_dff_x1
+X$89 vss vdd \$29 \$36 SP6T1Dec_inv_x1
+X$90 vss a[3] \$37 clk vdd SP6T1Dec_dff_x1
+X$91 vss vdd \$32 \$37 SP6T1Dec_inv_x1
+X$92 vss a[4] \$38 clk vdd SP6T1Dec_dff_x1
+X$93 vss vdd \$33 \$38 SP6T1Dec_inv_x1
+X$94 vss a[5] \$46 clk vdd SP6T1Dec_dff_x1
+X$95 vss vdd \$34 \$46 SP6T1Dec_inv_x1
+X$96 vss a[6] \$48 clk vdd SP6T1Dec_dff_x1
+X$97 vss vdd \$35 \$48 SP6T1Dec_inv_x1
+.ENDS SPDICERowPredecoders_A3B4B
+
+.SUBCKT SP6T1Dec_inv_x2 vss vdd nq i
+M$1 vss i nq vss sg13_lv_nmos L=0.13u W=5.6u AS=1.484p AD=1.484p PS=9.46u
++ PD=9.46u
+M$3 vdd i nq vdd sg13_lv_pmos L=0.13u W=8.8u AS=2.332p AD=2.332p PS=14.26u
++ PD=14.26u
+.ENDS SP6T1Dec_inv_x2
+
+.SUBCKT SP6T1Dec_nand2_x0 vss vdd i0 nq i1
+M$1 vss i0 \$6 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$2 \$6 i1 nq vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.312p PS=1.16u
++ PD=2.36u
+M$3 vdd i0 nq vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.408p AD=0.228p PS=3.08u
++ PD=1.58u
+M$4 nq i1 vdd vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.48p PS=1.58u
++ PD=3.2u
+.ENDS SP6T1Dec_nand2_x0
+
+.SUBCKT SPDICEArray_128X16 vss wl[21] wl[24] wl[10] wl[23] wl[11] wl[22] wl[25]
++ wl[12] wl[20] wl[13] wl[19] wl[18] wl[14] wl[17] wl[15] wl[16] wl[4] wl[0]
++ wl[1] wl[2] wl[3] wl[9] wl[5] wl[6] wl[7] wl[8] wl[38] wl[37] wl[39] wl[41]
++ wl[40] wl[48] wl[42] wl[43] wl[35] wl[44] wl[53] wl[45] wl[52] wl[51] wl[46]
++ wl[50] wl[47] wl[49] wl[36] wl[34] wl[33] wl[32] wl[31] wl[30] wl[26] wl[27]
++ wl[29] wl[28] bl_n[0] vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3]
++ bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] wl[62] wl[63] wl[61]
++ wl[58] wl[59] wl[57] wl[56] wl[55] wl[54] wl[60] bl_n[8] bl[8] bl[9] bl_n[9]
++ bl_n[10] bl[10] bl[11] bl_n[11] bl_n[12] bl[12] bl[13] bl_n[13] bl_n[14]
++ bl[14] bl[15] bl_n[15] wl[81] wl[82] wl[94] wl[80] wl[95] wl[98] wl[79]
++ wl[96] wl[78] wl[99] wl[97] wl[93] wl[92] wl[90] wl[91] wl[83] wl[84] wl[85]
++ wl[86] wl[87] wl[88] wl[89] wl[103] wl[101] wl[69] wl[68] wl[102] wl[77]
++ wl[109] wl[67] wl[108] wl[76] wl[107] wl[106] wl[66] wl[105] wl[65] wl[64]
++ wl[104] wl[70] wl[75] wl[74] wl[73] wl[100] wl[72] wl[71] wl[113] wl[116]
++ wl[114] wl[115] wl[117] wl[118] wl[119] wl[120] wl[121] wl[122] wl[123]
++ wl[124] wl[125] wl[126] wl[127] wl[112] wl[110] wl[111]
+X$1 vss wl[8] wl[5] wl[4] vdd wl[3] wl[2] wl[1] wl[6] wl[0] wl[9] wl[7] wl[15]
++ wl[14] wl[16] wl[17] wl[19] wl[18] wl[12] wl[11] wl[10] wl[13] wl[29] wl[26]
++ wl[25] wl[24] wl[20] wl[27] wl[23] wl[28] wl[22] wl[21] wl[38] wl[32] wl[33]
++ wl[39] wl[37] wl[34] wl[36] wl[35] wl[31] wl[30] wl[46] wl[47] wl[48] wl[49]
++ wl[45] wl[44] wl[50] wl[43] wl[42] wl[41] wl[40] wl[61] wl[57] wl[56] wl[51]
++ wl[58] wl[55] wl[59] wl[54] wl[53] wl[52] wl[60] vss bl_n[0] vdd bl[0] bl[1]
++ bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[62] wl[63] bl_n[4] bl[4] bl[5] bl_n[5]
++ bl_n[6] bl[6] bl[7] bl_n[7] wl[81] wl[78] wl[80] wl[70] wl[72] wl[73] wl[74]
++ wl[75] wl[79] wl[76] wl[71] wl[77] wl[64] wl[65] wl[66] wl[67] wl[68] wl[69]
++ wl[87] wl[91] wl[90] wl[89] wl[88] wl[82] wl[86] wl[83] wl[85] wl[84] wl[101]
++ wl[100] wl[99] wl[98] wl[97] wl[96] wl[95] wl[92] wl[94] wl[93] wl[108]
++ wl[107] wl[109] wl[106] wl[111] wl[105] wl[102] wl[104] wl[110] wl[103]
++ wl[118] wl[119] wl[120] wl[121] wl[117] wl[116] wl[122] wl[115] wl[114]
++ wl[113] wl[112] wl[126] wl[125] wl[124] wl[123] wl[127] SPDICEArray_128X8
+X$3 vss wl[8] wl[5] wl[4] vdd wl[3] wl[2] wl[1] wl[6] wl[0] wl[9] wl[7] wl[15]
++ wl[14] wl[16] wl[17] wl[19] wl[18] wl[12] wl[11] wl[10] wl[13] wl[29] wl[26]
++ wl[25] wl[24] wl[20] wl[27] wl[23] wl[28] wl[22] wl[21] wl[38] wl[32] wl[33]
++ wl[39] wl[37] wl[34] wl[36] wl[35] wl[31] wl[30] wl[46] wl[47] wl[48] wl[49]
++ wl[45] wl[44] wl[50] wl[43] wl[42] wl[41] wl[40] wl[61] wl[57] wl[56] wl[51]
++ wl[58] wl[55] wl[59] wl[54] wl[53] wl[52] wl[60] vss bl_n[8] vdd bl[8] bl[9]
++ bl_n[9] bl_n[10] bl[10] bl[11] bl_n[11] wl[62] wl[63] bl_n[12] bl[12] bl[13]
++ bl_n[13] bl_n[14] bl[14] bl[15] bl_n[15] wl[81] wl[78] wl[80] wl[70] wl[72]
++ wl[73] wl[74] wl[75] wl[79] wl[76] wl[71] wl[77] wl[64] wl[65] wl[66] wl[67]
++ wl[68] wl[69] wl[87] wl[91] wl[90] wl[89] wl[88] wl[82] wl[86] wl[83] wl[85]
++ wl[84] wl[101] wl[100] wl[99] wl[98] wl[97] wl[96] wl[95] wl[92] wl[94]
++ wl[93] wl[108] wl[107] wl[109] wl[106] wl[111] wl[105] wl[102] wl[104]
++ wl[110] wl[103] wl[118] wl[119] wl[120] wl[121] wl[117] wl[116] wl[122]
++ wl[115] wl[114] wl[113] wl[112] wl[126] wl[125] wl[124] wl[123] wl[127]
++ SPDICEArray_128X8
+.ENDS SPDICEArray_128X16
+
+.SUBCKT SPDICEPrecharge_26L100WM precharge_n vdd bl bl_n nwell
+M$1 vdd precharge_n bl_n nwell sg13_lv_pmos L=0.13u W=0.5u AS=0.3175p
++ AD=0.2425p PS=2.27u PD=1.47u
+M$2 bl_n precharge_n bl nwell sg13_lv_pmos L=0.13u W=0.5u AS=0.2425p AD=0.2425p
++ PS=1.47u PD=1.47u
+M$3 bl precharge_n vdd nwell sg13_lv_pmos L=0.13u W=0.5u AS=0.2425p AD=0.3175p
++ PS=1.47u PD=2.27u
+.ENDS SPDICEPrecharge_26L100WM
+
+.SUBCKT SPDICEColMux_4MN26L580W1R vss muxbl bl[0] bl_n[0] muxbl_n bl_n[1] bl[1]
++ bl[2] bl_n[2] bl_n[3] bl[3] mux[0] mux[1] mux[2] mux[3]
+M$1 bl[3] mux[3] muxbl vss sg13_lv_nmos L=0.13u W=2.9u AS=0.986p AD=0.986p
++ PS=6.48u PD=6.48u
+M$2 bl_n[2] mux[2] muxbl_n vss sg13_lv_nmos L=0.13u W=2.9u AS=0.986p AD=0.551p
++ PS=6.48u PD=3.28u
+M$3 muxbl_n mux[3] bl_n[3] vss sg13_lv_nmos L=0.13u W=2.9u AS=0.551p AD=0.986p
++ PS=3.28u PD=6.48u
+M$4 bl[1] mux[1] muxbl vss sg13_lv_nmos L=0.13u W=2.9u AS=0.986p AD=0.551p
++ PS=6.48u PD=3.28u
+M$5 muxbl mux[2] bl[2] vss sg13_lv_nmos L=0.13u W=2.9u AS=0.551p AD=0.986p
++ PS=3.28u PD=6.48u
+M$6 bl_n[0] mux[0] muxbl_n vss sg13_lv_nmos L=0.13u W=2.9u AS=0.986p AD=0.551p
++ PS=6.48u PD=3.28u
+M$7 muxbl_n mux[1] bl_n[1] vss sg13_lv_nmos L=0.13u W=2.9u AS=0.551p AD=0.986p
++ PS=3.28u PD=6.48u
+M$8 muxbl mux[0] bl[0] vss sg13_lv_nmos L=0.13u W=2.9u AS=0.986p AD=0.986p
++ PS=6.48u PD=6.48u
+.ENDS SPDICEColMux_4MN26L580W1R
+
+.SUBCKT SPDICEReadWrite_CM4MN26L580W1R_WD26L380W bl vss bl_n vdd q d clk we_n
+X$1 q vdd vss bl_n bl nsnrlatch_x1
+X$2 vss vdd \$5 \$16 we_n nor2_x0
+X$3 vss vdd \$16 \$11 inv_x0
+X$4 vss d \$11 clk vdd dff_x1
+X$5 vss vdd \$3 \$11 we_n nor2_x0
+M$1 bl \$3 vss vss sg13_lv_nmos L=0.13u W=1.9u AS=0.5074p AD=0.361p PS=4.48u
++ PD=2.28u
+M$2 vss \$5 bl_n vss sg13_lv_nmos L=0.13u W=1.9u AS=0.361p AD=0.5074p PS=2.28u
++ PD=4.48u
+.ENDS SPDICEReadWrite_CM4MN26L580W1R_WD26L380W
+
+.SUBCKT SPDICEClockWE clkup we we_en we_n vss vdd clkdown
+X$1 vdd vss clkup clkdown buf_x2
+X$2 vss we \$9 clkdown vdd dff_x1
+X$3 vss vdd \$9 we_n we_en nand2_x0
+.ENDS SPDICEClockWE
+
+.SUBCKT SPDICERowDecoderNand3 vss vdd pd[0] wl_n page wl_en
+M$1 vss pd[0] \$8 vss sg13_lv_nmos L=0.13u W=0.46u AS=0.2962p AD=0.1012p
++ PS=2.5u PD=0.9u
+M$2 \$8 page \$7 vss sg13_lv_nmos L=0.13u W=0.46u AS=0.1012p AD=0.1012p PS=0.9u
++ PD=0.9u
+M$3 \$7 wl_en wl_n vss sg13_lv_nmos L=0.13u W=0.46u AS=0.1012p AD=0.1564p
++ PS=0.9u PD=1.6u
+M$4 vdd pd[0] wl_n vdd sg13_lv_pmos L=0.13u W=0.46u AS=0.2962p AD=0.1012p
++ PS=2.5u PD=0.9u
+M$5 wl_n page vdd vdd sg13_lv_pmos L=0.13u W=0.46u AS=0.1012p AD=0.1642p
++ PS=0.9u PD=1.32u
+M$6 vdd wl_en wl_n vdd sg13_lv_pmos L=0.13u W=0.46u AS=0.1642p AD=0.1564p
++ PS=1.32u PD=1.6u
+.ENDS SPDICERowDecoderNand3
+
+.SUBCKT SP6T1Dec_and3_x1 vdd vss i0 i1 i2 q
+M$1 \$1 i0 \$9 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$2 \$9 i1 \$8 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p PS=1.16u
++ PD=1.16u
+M$3 \$8 i2 vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.5033p PS=1.16u
++ PD=3.21u
+M$4 vss \$1 q vss sg13_lv_nmos L=0.13u W=2.8u AS=0.5033p AD=1.036p PS=3.21u
++ PD=6.34u
+M$5 \$1 i0 vdd vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.408p AD=0.228p PS=3.08u
++ PD=1.58u
+M$6 vdd i1 \$1 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.228p PS=1.58u
++ PD=1.58u
+M$7 vdd i2 \$1 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.79p AD=0.228p PS=4.81u
++ PD=1.58u
+M$8 vdd \$1 q vdd sg13_lv_pmos L=0.13u W=4.4u AS=0.79p AD=1.628p PS=4.81u
++ PD=9.54u
+.ENDS SP6T1Dec_and3_x1
+
+.SUBCKT SP6T1Dec_and4_x1 vdd vss i0 i1 i2 i3 q
+M$1 \$1 i0 \$11 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$2 \$11 i1 \$10 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$3 \$10 i2 \$9 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p PS=1.16u
++ PD=1.16u
+M$4 \$9 i3 vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.5033p PS=1.16u
++ PD=3.21u
+M$5 vss \$1 q vss sg13_lv_nmos L=0.13u W=2.8u AS=0.5033p AD=1.036p PS=3.21u
++ PD=6.34u
+M$6 vdd i0 \$1 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.408p AD=0.228p PS=3.08u
++ PD=1.58u
+M$7 \$1 i1 vdd vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.228p PS=1.58u
++ PD=1.58u
+M$8 vdd i2 \$1 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.228p PS=1.58u
++ PD=1.58u
+M$9 vdd i3 \$1 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.79p AD=0.228p PS=4.81u
++ PD=1.58u
+M$10 vdd \$1 q vdd sg13_lv_pmos L=0.13u W=4.4u AS=0.79p AD=1.628p PS=4.81u
++ PD=9.54u
+.ENDS SP6T1Dec_and4_x1
+
+.SUBCKT SP6T1Dec_inv_x1 vss vdd nq i
+M$1 vss i nq vss sg13_lv_nmos L=0.13u W=2.8u AS=0.952p AD=0.952p PS=6.28u
++ PD=6.28u
+M$2 vdd i nq vdd sg13_lv_pmos L=0.13u W=4.4u AS=1.496p AD=1.496p PS=9.48u
++ PD=9.48u
+.ENDS SP6T1Dec_inv_x1
+
+.SUBCKT SP6T1Dec_dff_x1 vss i q clk vdd
+M$1 \$4 i vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$2 vss \$4 \$11 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$3 \$11 \$2 \$6 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$4 \$6 \$3 \$12 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$5 \$12 \$7 vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1638p
++ PS=1.16u PD=1.2u
+M$6 vss \$6 \$7 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1638p AD=0.2496p PS=1.2u
++ PD=1.42u
+M$7 \$7 \$3 \$8 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2496p AD=0.1482p PS=1.42u
++ PD=1.16u
+M$8 \$8 \$2 \$10 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$9 \$10 q vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.7217p PS=1.16u
++ PD=2.88u
+M$10 vss \$8 q vss sg13_lv_nmos L=0.13u W=2.17u AS=0.7217p AD=0.7378p PS=2.88u
++ PD=5.02u
+M$11 \$2 clk vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1716p
++ PS=2.24u PD=1.22u
+M$12 vss \$2 \$3 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1716p AD=0.2652p
++ PS=1.22u PD=2.24u
+M$13 \$4 i vdd vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.408p AD=0.228p PS=3.08u
++ PD=1.58u
+M$14 vdd \$4 \$15 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.228p PS=1.58u
++ PD=1.58u
+M$15 \$15 \$3 \$6 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.228p PS=1.58u
++ PD=1.58u
+M$16 \$6 \$2 \$16 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.228p PS=1.58u
++ PD=1.58u
+M$17 \$16 \$7 vdd vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.252p PS=1.58u
++ PD=1.62u
+M$18 vdd \$6 \$7 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.252p AD=0.384p PS=1.62u
++ PD=1.84u
+M$19 \$7 \$2 \$8 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.384p AD=0.228p PS=1.84u
++ PD=1.58u
+M$20 \$8 \$3 \$17 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.228p AD=0.228p PS=1.58u
++ PD=1.58u
+M$21 vdd q \$17 vdd sg13_lv_pmos L=0.13u W=1.2u AS=1.2484p AD=0.228p PS=4.48u
++ PD=1.58u
+M$22 vdd \$8 q vdd sg13_lv_pmos L=0.13u W=3.77u AS=1.2484p AD=1.2818p PS=4.48u
++ PD=8.22u
+M$23 \$2 clk vdd vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.408p AD=0.264p PS=3.08u
++ PD=1.64u
+M$24 vdd \$2 \$3 vdd sg13_lv_pmos L=0.13u W=1.2u AS=0.264p AD=0.408p PS=1.64u
++ PD=3.08u
+.ENDS SP6T1Dec_dff_x1
+
+.SUBCKT SPDICEArray_128X8 \$1 wl[8] wl[5] wl[4] nwell wl[3] wl[2] wl[1] wl[6]
++ wl[0] wl[9] wl[7] wl[15] wl[14] wl[16] wl[17] wl[19] wl[18] wl[12] wl[11]
++ wl[10] wl[13] wl[29] wl[26] wl[25] wl[24] wl[20] wl[27] wl[23] wl[28] wl[22]
++ wl[21] wl[38] wl[32] wl[33] wl[39] wl[37] wl[34] wl[36] wl[35] wl[31] wl[30]
++ wl[46] wl[47] wl[48] wl[49] wl[45] wl[44] wl[50] wl[43] wl[42] wl[41] wl[40]
++ wl[61] wl[57] wl[56] wl[51] wl[58] wl[55] wl[59] wl[54] wl[53] wl[52] wl[60]
++ vss bl_n[0] vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[62] wl[63]
++ bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] wl[81] wl[78] wl[80]
++ wl[70] wl[72] wl[73] wl[74] wl[75] wl[79] wl[76] wl[71] wl[77] wl[64] wl[65]
++ wl[66] wl[67] wl[68] wl[69] wl[87] wl[91] wl[90] wl[89] wl[88] wl[82] wl[86]
++ wl[83] wl[85] wl[84] wl[101] wl[100] wl[99] wl[98] wl[97] wl[96] wl[95]
++ wl[92] wl[94] wl[93] wl[108] wl[107] wl[109] wl[106] wl[111] wl[105] wl[102]
++ wl[104] wl[110] wl[103] wl[118] wl[119] wl[120] wl[121] wl[117] wl[116]
++ wl[122] wl[115] wl[114] wl[113] wl[112] wl[126] wl[125] wl[124] wl[123]
++ wl[127]
+X$1 \$1 wl[72] wl[69] wl[68] nwell wl[67] wl[66] wl[65] wl[70] wl[64] wl[73]
++ wl[71] wl[79] wl[78] wl[80] wl[81] wl[83] wl[82] wl[76] wl[75] wl[74] wl[77]
++ wl[93] wl[90] wl[89] wl[88] wl[84] wl[91] wl[87] wl[92] wl[86] wl[85] vss
++ bl_n[0] vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[94] wl[95]
++ bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] wl[102] wl[103]
++ wl[104] wl[105] wl[113] wl[112] wl[111] wl[110] wl[106] wl[107] wl[109]
++ wl[108] wl[96] wl[97] wl[98] wl[101] wl[100] wl[99] wl[119] wl[123] wl[122]
++ wl[121] wl[120] wl[114] wl[118] wl[115] wl[117] wl[116] wl[127] wl[126]
++ wl[125] wl[124] SPDICEArray_64X8
+X$2 \$1 wl[8] wl[5] wl[4] nwell wl[3] wl[2] wl[1] wl[6] wl[0] wl[9] wl[7]
++ wl[15] wl[14] wl[16] wl[17] wl[19] wl[18] wl[12] wl[11] wl[10] wl[13] wl[29]
++ wl[26] wl[25] wl[24] wl[20] wl[27] wl[23] wl[28] wl[22] wl[21] vss bl_n[0]
++ vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[30] wl[31] bl_n[4]
++ bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] wl[38] wl[39] wl[40] wl[41]
++ wl[49] wl[48] wl[47] wl[46] wl[42] wl[43] wl[45] wl[44] wl[32] wl[33] wl[34]
++ wl[37] wl[36] wl[35] wl[55] wl[59] wl[58] wl[57] wl[56] wl[50] wl[54] wl[51]
++ wl[53] wl[52] wl[63] wl[62] wl[61] wl[60] SPDICEArray_64X8
+.ENDS SPDICEArray_128X8
+
+.SUBCKT inv_x0 vss vdd nq i
+M$1 vss i nq vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.2652p PS=2.24u
++ PD=2.24u
+M$2 vdd i nq vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2652p AD=0.2652p PS=2.24u
++ PD=2.24u
+.ENDS inv_x0
+
+.SUBCKT nor2_x0 vss vdd nq i0 i1
+M$1 vss i0 nq vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$2 nq i1 vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.2808p PS=1.16u
++ PD=2.28u
+M$3 vdd i0 \$6 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$4 \$6 i1 nq vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.2808p PS=1.16u
++ PD=2.28u
+.ENDS nor2_x0
+
+.SUBCKT nsnrlatch_x1 q vdd vss nset nrst
+M$1 q nset \$8 vss sg13_lv_nmos L=0.13u W=1.31u AS=0.4454p AD=0.2489p PS=3.3u
++ PD=1.69u
+M$2 \$8 nq vss vss sg13_lv_nmos L=0.13u W=1.31u AS=0.2489p AD=0.2489p PS=1.69u
++ PD=1.69u
+M$3 vss q \$7 vss sg13_lv_nmos L=0.13u W=1.31u AS=0.2489p AD=0.262p PS=1.69u
++ PD=1.71u
+M$4 \$7 nrst nq vss sg13_lv_nmos L=0.13u W=1.31u AS=0.262p AD=0.4454p PS=1.71u
++ PD=3.3u
+M$5 vdd nset q vdd sg13_lv_pmos L=0.13u W=1.3u AS=0.442p AD=0.247p PS=3.28u
++ PD=1.68u
+M$6 q nq vdd vdd sg13_lv_pmos L=0.13u W=1.3u AS=0.247p AD=0.247p PS=1.68u
++ PD=1.68u
+M$7 vdd q nq vdd sg13_lv_pmos L=0.13u W=1.3u AS=0.247p AD=0.26p PS=1.68u PD=1.7u
+M$8 nq nrst vdd vdd sg13_lv_pmos L=0.13u W=1.3u AS=0.26p AD=0.442p PS=1.7u
++ PD=3.28u
+.ENDS nsnrlatch_x1
+
+.SUBCKT nand2_x0 vss vdd i0 nq i1
+M$1 vss i0 \$6 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$2 \$6 i1 nq vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.2808p PS=1.16u
++ PD=2.28u
+M$3 vdd i0 nq vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$4 nq i1 vdd vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.2808p PS=1.16u
++ PD=2.28u
+.ENDS nand2_x0
+
+.SUBCKT dff_x1 vss i q clk vdd
+M$1 \$4 i vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$2 vss \$4 \$12 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$3 \$12 \$2 \$6 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$4 \$6 \$3 \$11 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$5 \$11 \$7 vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$6 vss \$6 \$7 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.2028p PS=1.16u
++ PD=1.3u
+M$7 \$7 \$3 \$8 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2028p AD=0.1482p PS=1.3u
++ PD=1.16u
+M$8 \$8 \$2 \$10 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$9 \$10 q vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.1482p AD=0.2265p PS=1.16u
++ PD=1.38u
+M$10 vss \$8 q vss sg13_lv_nmos L=0.13u W=0.83u AS=0.2265p AD=0.2822p PS=1.38u
++ PD=2.34u
+M$11 \$2 clk vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.156p PS=2.24u
++ PD=1.18u
+M$12 vss \$2 \$3 vss sg13_lv_nmos L=0.13u W=0.78u AS=0.156p AD=0.2652p PS=1.18u
++ PD=2.24u
+M$13 \$4 i vdd vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2652p AD=0.1482p PS=2.24u
++ PD=1.16u
+M$14 vdd \$4 \$15 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$15 \$15 \$3 \$6 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$16 \$6 \$2 \$16 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$17 \$16 \$7 vdd vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$18 vdd \$6 \$7 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.2028p
++ PS=1.16u PD=1.3u
+M$19 \$7 \$2 \$8 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2028p AD=0.1482p PS=1.3u
++ PD=1.16u
+M$20 \$8 \$3 \$17 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.1482p AD=0.1482p
++ PS=1.16u PD=1.16u
+M$21 vdd q \$17 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2241p AD=0.1482p PS=1.37u
++ PD=1.16u
+M$22 vdd \$8 q vdd sg13_lv_pmos L=0.13u W=0.82u AS=0.2241p AD=0.2788p PS=1.37u
++ PD=2.32u
+M$23 \$2 clk vdd vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2652p AD=0.156p PS=2.24u
++ PD=1.18u
+M$24 vdd \$2 \$3 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.156p AD=0.2652p PS=1.18u
++ PD=2.24u
+.ENDS dff_x1
+
+.SUBCKT buf_x2 vdd vss i q
+M$1 \$1 i vss vss sg13_lv_nmos L=0.13u W=0.78u AS=0.2652p AD=0.2092p PS=2.24u
++ PD=1.48u
+M$2 vss \$1 q vss sg13_lv_nmos L=0.13u W=2.14u AS=0.4125p AD=0.5671p PS=2.93u
++ PD=4.27u
+M$4 vdd i \$1 vdd sg13_lv_pmos L=0.13u W=0.78u AS=0.2075p AD=0.2652p PS=1.47u
++ PD=2.24u
+M$5 vdd \$1 q vdd sg13_lv_pmos L=0.13u W=2.12u AS=0.4089p AD=0.5618p PS=2.91u
++ PD=4.24u
+.ENDS buf_x2
+
+.SUBCKT SPDICEArray_64X8 \$1 wl[8] wl[5] wl[4] nwell wl[3] wl[2] wl[1] wl[6]
++ wl[0] wl[9] wl[7] wl[15] wl[14] wl[16] wl[17] wl[19] wl[18] wl[12] wl[11]
++ wl[10] wl[13] wl[29] wl[26] wl[25] wl[24] wl[20] wl[27] wl[23] wl[28] wl[22]
++ wl[21] vss bl_n[0] vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[30]
++ wl[31] bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] wl[38] wl[39]
++ wl[40] wl[41] wl[49] wl[48] wl[47] wl[46] wl[42] wl[43] wl[45] wl[44] wl[32]
++ wl[33] wl[34] wl[37] wl[36] wl[35] wl[55] wl[59] wl[58] wl[57] wl[56] wl[50]
++ wl[54] wl[51] wl[53] wl[52] wl[63] wl[62] wl[61] wl[60]
+X$1 \$1 wl[40] wl[37] wl[36] nwell wl[35] wl[34] wl[33] wl[38] wl[32] wl[41]
++ wl[39] vss bl_n[0] vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[42]
++ wl[47] wl[46] wl[45] wl[43] wl[44] bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6]
++ bl[7] bl_n[7] wl[58] wl[63] wl[59] wl[62] wl[54] wl[55] wl[61] wl[60] wl[57]
++ wl[56] wl[52] wl[51] wl[50] wl[49] wl[48] wl[53] SPDICEArray_32X8
+X$2 \$1 wl[8] wl[5] wl[4] nwell wl[3] wl[2] wl[1] wl[6] wl[0] wl[9] wl[7] vss
++ bl_n[0] vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[10] wl[15]
++ wl[14] wl[13] wl[11] wl[12] bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7]
++ bl_n[7] wl[26] wl[31] wl[27] wl[30] wl[22] wl[23] wl[29] wl[28] wl[25] wl[24]
++ wl[20] wl[19] wl[18] wl[17] wl[16] wl[21] SPDICEArray_32X8
+.ENDS SPDICEArray_64X8
+
+.SUBCKT SPDICEArray_32X8 \$1 wl[8] wl[5] wl[4] nwell wl[3] wl[2] wl[1] wl[6]
++ wl[0] wl[9] wl[7] vss bl_n[0] vdd bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3]
++ bl_n[3] wl[10] wl[15] wl[14] wl[13] wl[11] wl[12] bl_n[4] bl[4] bl[5] bl_n[5]
++ bl_n[6] bl[6] bl[7] bl_n[7] wl[26] wl[31] wl[27] wl[30] wl[22] wl[23] wl[29]
++ wl[28] wl[25] wl[24] wl[20] wl[19] wl[18] wl[17] wl[16] wl[21]
+X$1 \$1 vdd wl[20] wl[21] nwell wl[22] wl[23] wl[19] wl[17] wl[16] wl[18] vss
++ bl_n[0] bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[24] wl[25] wl[26]
++ wl[27] wl[28] bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] wl[29]
++ wl[30] wl[31] SPDICEArray_16X8
+X$2 \$1 vdd wl[4] wl[5] nwell wl[6] wl[7] wl[3] wl[1] wl[0] wl[2] vss bl_n[0]
++ bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[8] wl[9] wl[10] wl[11]
++ wl[12] bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7] bl_n[7] wl[13] wl[14]
++ wl[15] SPDICEArray_16X8
+.ENDS SPDICEArray_32X8
+
+.SUBCKT SPDICEArray_16X8 \$1 vdd wl[4] wl[5] nwell wl[6] wl[7] wl[3] wl[1]
++ wl[0] wl[2] vss bl_n[0] bl[0] bl[1] bl_n[1] bl_n[2] bl[2] bl[3] bl_n[3] wl[8]
++ wl[9] wl[10] wl[11] wl[12] bl_n[4] bl[4] bl[5] bl_n[5] bl_n[6] bl[6] bl[7]
++ bl_n[7] wl[13] wl[14] wl[15]
+X$1 wl[8] wl[9] wl[10] wl[11] wl[12] wl[13] wl[14] wl[15] nwell vss vdd bl[0]
++ bl_n[0] bl[1] bl_n[1] bl[2] bl_n[2] bl[3] bl_n[3] bl[4] bl_n[4] bl[5] bl_n[5]
++ bl[6] bl_n[6] bl[7] bl_n[7] \$1 SPDICEArray_8X8
+X$2 wl[0] wl[1] wl[2] wl[3] wl[4] wl[5] wl[6] wl[7] nwell vss vdd bl[0] bl_n[0]
++ bl[1] bl_n[1] bl[2] bl_n[2] bl[3] bl_n[3] bl[4] bl_n[4] bl[5] bl_n[5] bl[6]
++ bl_n[6] bl[7] bl_n[7] \$1 SPDICEArray_8X8
+.ENDS SPDICEArray_16X8
+
+.SUBCKT SPDICEArray_8X8 wl[0] wl[1] wl[2] wl[3] wl[4] wl[5] wl[6] wl[7] nwell
++ vss vdd bl[0] bl_n[0] bl[1] bl_n[1] bl[2] bl_n[2] bl[3] bl_n[3] bl[4] bl_n[4]
++ bl[5] bl_n[5] bl[6] bl_n[6] bl[7] bl_n[7] \$47
+X$1 wl[0] wl[1] wl[2] wl[3] wl[4] wl[5] wl[6] wl[7] nwell vss vdd bl[4] bl_n[4]
++ bl[5] bl_n[5] bl[6] bl_n[6] bl[7] bl_n[7] \$47 SPDICEArray_8X4
+X$2 wl[0] wl[1] wl[2] wl[3] wl[4] wl[5] wl[6] wl[7] nwell vss vdd bl[0] bl_n[0]
++ bl[1] bl_n[1] bl[2] bl_n[2] bl[3] bl_n[3] \$47 SPDICEArray_8X4
+.ENDS SPDICEArray_8X8
+
+.SUBCKT SPDICEArray_8X4 wl[0] wl[1] wl[2] wl[3] wl[4] wl[5] wl[6] wl[7] nwell
++ vss vdd bl[0] bl_n[0] bl[1] bl_n[1] bl[2] bl_n[2] bl[3] bl_n[3] \$31
+X$1 wl[0] wl[1] wl[2] wl[3] nwell vss vdd bl[0] bl_n[0] bl[1] bl_n[1] bl[2]
++ bl_n[2] bl[3] bl_n[3] \$31 SPDICEArray_4X4
+X$2 wl[4] wl[5] wl[6] wl[7] nwell vss vdd bl[0] bl_n[0] bl[1] bl_n[1] bl[2]
++ bl_n[2] bl[3] bl_n[3] \$31 SPDICEArray_4X4
+.ENDS SPDICEArray_8X4
+
+.SUBCKT SPDICEArray_4X4 wl[0] wl[1] wl[2] wl[3] nwell vss vdd bl[0] bl_n[0]
++ bl[1] bl_n[1] bl[2] bl_n[2] bl[3] bl_n[3] \$25
+X$1 wl[0] wl[1] wl[2] wl[3] nwell vss vdd bl[2] bl_n[2] bl[3] bl_n[3] \$25
++ SPDICEArray_4X2
+X$2 wl[0] wl[1] wl[2] wl[3] nwell vss vdd bl[0] bl_n[0] bl[1] bl_n[1] \$25
++ SPDICEArray_4X2
+.ENDS SPDICEArray_4X4
+
+.SUBCKT SPDICEArray_4X2 wl[0] wl[1] wl[2] wl[3] nwell vss vdd bl[0] bl_n[0]
++ bl[1] bl_n[1] \$17
+X$1 wl[0] wl[1] nwell vss vdd bl[0] bl_n[0] bl[1] bl_n[1] \$17 SPDICEArray_2X2
+X$2 wl[2] wl[3] nwell vss vdd bl[0] bl_n[0] bl[1] bl_n[1] \$17 SPDICEArray_2X2
+.ENDS SPDICEArray_4X2
+
+.SUBCKT SPDICEArray_2X2 wl[0] wl[1] nwell vss vdd bl[0] bl_n[0] bl[1] bl_n[1]
++ \$14
+X$1 wl[0] wl[1] nwell vss vdd bl[1] bl_n[1] \$14 SPDICEArray_2X1
+X$2 wl[0] wl[1] nwell vss vdd bl[0] bl_n[0] \$14 SPDICEArray_2X1
+.ENDS SPDICEArray_2X2
+
+.SUBCKT SPDICEArray_2X1 wl[0] wl[1] nwell vss vdd bl[0] bl_n[0] \$10
+X$1 \$10 vss bl_n[0] bl[0] wl[0] vdd nwell SPDICECell
+X$2 \$10 vss bl_n[0] bl[0] wl[1] vdd nwell SPDICECell
+.ENDS SPDICEArray_2X1
+
+.SUBCKT SPDICECell \$1 vss bl_n bl wl vdd nwell
+M$1 bl_n wl \$6 \$1 sg13_lv_nmos L=0.13u W=0.2u AS=0.076p AD=0.0828p PS=1.16u
++ PD=0.965u
+M$2 bl wl \$7 \$1 sg13_lv_nmos L=0.13u W=0.2u AS=0.076p AD=0.0794p PS=1.16u
++ PD=0.945u
+M$3 vss \$7 \$6 \$1 sg13_lv_nmos L=0.13u W=0.34u AS=0.1446p AD=0.0828p PS=1.52u
++ PD=0.965u
+M$4 vss \$8 \$7 \$1 sg13_lv_nmos L=0.13u W=0.34u AS=0.1446p AD=0.0794p PS=1.52u
++ PD=0.945u
+M$5 bl_n wl \$8 \$1 sg13_lv_nmos L=0.13u W=0.2u AS=0.076p AD=0.0828p PS=1.16u
++ PD=0.965u
+M$6 bl wl \$9 \$1 sg13_lv_nmos L=0.13u W=0.2u AS=0.076p AD=0.0828p PS=1.16u
++ PD=0.965u
+M$7 vss \$9 \$8 \$1 sg13_lv_nmos L=0.13u W=0.34u AS=0.1446p AD=0.0828p PS=1.52u
++ PD=0.965u
+M$8 vss \$6 \$9 \$1 sg13_lv_nmos L=0.13u W=0.34u AS=0.1446p AD=0.0828p PS=1.52u
++ PD=0.965u
+M$9 \$6 \$9 vdd nwell sg13_lv_pmos L=0.13u W=0.34u AS=0.0986p AD=0.1041p
++ PS=1.26u PD=1.115u
+M$10 vdd \$6 \$7 nwell sg13_lv_pmos L=0.13u W=0.34u AS=0.1041p AD=0.0986p
++ PS=1.115u PD=1.26u
+M$11 \$8 \$7 vdd nwell sg13_lv_pmos L=0.13u W=0.34u AS=0.0986p AD=0.1041p
++ PS=1.26u PD=1.115u
+M$12 vdd \$8 \$9 nwell sg13_lv_pmos L=0.13u W=0.34u AS=0.1041p AD=0.1322p
++ PS=1.115u PD=1.68u
+.ENDS SPDICECell
