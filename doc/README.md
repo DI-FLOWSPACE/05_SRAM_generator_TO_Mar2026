@@ -19,6 +19,20 @@ The testchip consists of six SRAM blocks with shift registers on input and outpu
 
 Each of the blocks is put on the testchip twice. One time connected to the padring to test the SRAM blocks on a packaged chip. One time connected out to a pad frame to test the SRAM blocks with a probe card on wafer.
 
+For the three variations of the single bit cell the different metrics were simulated and here are the results:
+
+| Variation | w_pu  | w_pd  | w_pg | I_read | I_leak | SNM_hold | SNM_read | WTP |
+|-|-|-|-|-|-|-|-|-|
+| SP01 | 0.15µm | 0.20µm | 0.20µm | 46.9µA | 18.3pA | 754.6mV | 4715mV | 225.1mV |
+| SP02 | 0.55µm | 0.55µm | 0.30µm | 80.1µA | 70.1pA | 751.1mV | 543.8mV | 131.1mV |
+| SP03 | 0.20µm | 0.90µm | 0.20µm | 74.6µA | 64.1pA | 714.5mV | 561.2mV | 174.7mV |
+
+Also for DICE bit cell the metrics were simulated:
+
+| I_read | I_leak | SNM_hold | SNM_read | WTP |
+|-|-|-|-|-|
+| 112.9µA | 90.0pA | 785.8mV | 541.8mV | 211.5mV |
+
 ### Provided folders and files
 
 * `gds`: in this directory the output file `RadHardSRAMTest_filled.gds.gz` is the layout of the design. The `RadHardSRAMTest_filled_v2.gds.gz` is the actual file submitted for tape-in and should be the same as `RadHardSRAMTest_filled.gds.gz`. `RadHardSRAMTest_filled_v1.gds.gz` is an itermediate file only kept here for reference and should be ignored.
